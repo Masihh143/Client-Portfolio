@@ -33,14 +33,19 @@ function Home() {
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
       >
-        {visible &&
-          trail.map((pos, index) => {
+        {/* Smooth fade container for trail */}
+        <div
+          className={`absolute inset-0 transition-opacity duration-500 ${
+            visible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {trail.map((pos, index) => {
             const opacity = (index + 1) / trail.length;
 
             return (
               <div
                 key={index}
-                className="absolute w-40 h-40 rounded-full pointer-events-none blur-2xl transition-all duration-75 ease-out"
+                className="absolute w-36 h-36 rounded-full pointer-events-none blur-2xl transition-all duration-75 ease-out"
                 style={{
                   left: pos.x - 80,
                   top: pos.y - 80,
@@ -51,6 +56,7 @@ function Home() {
               ></div>
             );
           })}
+        </div>
 
         <div className="z-10">
           <img src={name} alt="name" />
