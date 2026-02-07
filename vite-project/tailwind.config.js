@@ -4,11 +4,7 @@ module.exports = {
       "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-      extend: {
-        fontFamily: {
-          googlesans: ["Google Sans Code", "monospace"],
-        },
-      },
+    
     },
     plugins: [],
   };

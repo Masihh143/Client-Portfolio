@@ -51,14 +51,14 @@ const Navbar = () => {
     }, []);
 
     return (
-      <nav className="min-h-32 bg-black text-white flex flex-row justify-between fixed top-0 left-0 right-0 px-15 py-5">
+      <nav className="min-h-32 bg-black text-white flex flex-row justify-between fixed top-0 left-0 right-0 px-15 py-10 z-100 font-googlesans font-light text-base leading-none tracking-tightest text-base">
       <div className='logo'>
         <img src={logo} alt={logo} />
       </div>
 
       <div>Data Scientist</div>
       <div>
-        <ul className='flex flex-col gap-2'>
+        <ul className='flex flex-col gap-4'>
           <li>About</li>
           <li>Skills</li>
           <li>Work</li>
@@ -66,13 +66,13 @@ const Navbar = () => {
       </div>
       <div>Achivements</div>
       <div>
-        <ul className='flex flex-col gap-2'>
-          <li className="font-googlesans">Linkedin</li>
+        <ul className='flex flex-col gap-4'>
+          <li>Linkedin</li>
           <li>GitHub</li>
           <li>LeetCode</li>
         </ul>
       </div>
-      <div className="bg-white text-black self-baseline h-10 w-45 flex flex-row justify-evenly items-center">Let's Talk</div>
+      <div className="bg-white text-black self-baseline h-12 w-45 flex flex-row justify-evenly items-center">Let's Talk</div>
     </nav>
     )
 }
