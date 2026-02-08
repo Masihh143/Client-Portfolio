@@ -5,9 +5,9 @@ function About() {
   return (
     <div id="about" className="min-h-screen bg-black text-white pt-32 flex flex-col justify-center items-center">
         <div className='flex flex-row gap-20'>
-            <img src={Photo} alt={Photo} className='w-68 h-87 rounded-3xl object-cover' />
+            <img src={Photo} alt={Photo} className='w-68 h-87 rounded-3xl object-cover bg-white' />
             <div className='flex flex-col gap-5 max-w-lg'>
-                <div className='text-lg w-120 font-googlesans font-light tracking-tightest leading-relaxed space-y-6'>
+                <div className='text-lg min-w-160 font-googlesans font-light tracking-tightest leading-relaxed space-y-6'>
 
                     <p>
                     I’m an aspiring <span className="font-semibold italic">Data Scientist</span> and 
