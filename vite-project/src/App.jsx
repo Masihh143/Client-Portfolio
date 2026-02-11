@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar"
 import Home from './components/Home'
 import About from './components/About'
 import Skills from './components/Skills'
+
+import Achivements from './components/Achivements'
 import './App.css'
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
     <Home />
     <About />
     <Skills />
+
+    <Achivements />
     </>
   )
 }
