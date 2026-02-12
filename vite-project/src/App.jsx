@@ -5,6 +5,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 
 import Achivements from './components/Achivements'
+import Contact from './components/Contact'
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Skills />
 
     <Achivements />
+    <Contact />
     </>
   )
 }

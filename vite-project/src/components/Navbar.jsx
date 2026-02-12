@@ -72,7 +72,7 @@ const Navbar = () => {
           <li>LeetCode</li>
         </ul>
       </div>
-      <div className="bg-white text-black self-baseline h-12 w-45 flex flex-row justify-evenly items-center">Let's Talk</div>
+      <button className="bg-white text-black self-baseline h-12 w-45 flex flex-row justify-evenly items-center">Let's Talk</button>
     </nav>
     )
 }

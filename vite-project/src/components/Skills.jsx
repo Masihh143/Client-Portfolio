@@ -9,7 +9,7 @@ function Skills() {
       className="min-h-screen bg-black flex flex-col justify-center items-center"
     >
       <div
-        className="relative bg-cover bg-center bg-no-repeat text-white px-60 py-24 flex flex-col justify-center"
+        className="relative bg-cover bg-center bg-no-repeat text-white px-30 py-24 flex flex-col justify-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-transparent via-50% to-black/100 pointer-events-none"></div>
