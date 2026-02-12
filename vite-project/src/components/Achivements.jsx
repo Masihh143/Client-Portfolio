@@ -3,6 +3,14 @@ import arrow from "../assets/Arrow.svg";
 import bg from "../assets/black-bg2.png";
 
 function Achivements() {
+    const Certifications = [
+        "Python Programming",
+        "Machine Learning Foundation",
+        "Deep Learning",
+        "Power BI",
+        "AWS Cloud Foundations",
+    ]
+
   return (
     <div
     id="achivements"
@@ -52,13 +60,7 @@ function Achivements() {
                 <div className="col-start-1 col-span-4 p-6 flex flex-col justify-center items-center border-x-1 border-white/70 rounded-xl bg-transparent backdrop-blur-xs shadow-[inset_10px_2px_20px_rgba(255,255,255,0.1)]">
                     <h3 className="text-4xl font-bold mb-2">Certifications & Learning</h3>
                     <ul className="text-xl font-bold flex flex-wrap justify-center items-center gap-x-12 gap-y-4 mt-6">
-                    {[
-                        "Python Programming",
-                        "Machine Learning Foundation",
-                        "Deep Learning",
-                        "Power BI",
-                        "AWS Cloud Foundations",
-                    ].map((item, index) => (
+                    {Certifications.map((item, index) => (
                         <li key={index} className="flex items-center gap-2">
                         <span className="text-white/80">⌘</span>
                         {item}

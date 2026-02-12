@@ -3,6 +3,14 @@ import arrow from "../assets/Arrow.svg";
 import bg from "../assets/black-bg.jpg";
 
 function Skills() {
+
+  const Programming = ["Python", "Java", "C"];
+  const ML = ["TensorFlow", "Keras", "Scikit-Learn", "LLM", "Neural Networks"];
+  const Data = ["Pandas", "NumPy", "Power BI", "EDA", "Data Visualization"];
+  const Tools = ["Git", "GitHub", "Google Colab", "VS Code", "Jupyter", "Flask"];
+  const Databases = ["SQL", "MongoDB"];
+  const Backend = ["FastAPI", "RestAPI"];
+
   return (
     <div
       id="skills"
@@ -25,7 +33,7 @@ function Skills() {
           <div className="col-start-2 col-span-1 p-6 border border-white/20 rounded-xl bg-transparent backdrop-blur-xs shadow-[inset_5px_2px_20px_rgba(255,255,255,0.1)]">
             <h3 className="text-2xl font-bold mb-4 italic">Programming</h3>
             <ul className="space-y-2 text-xl font-medium">
-              {["Python", "Java", "C"].map((item, index) => (
+              {Programming.map((item, index) => (
                 <li key={index} className="flex items-center gap-2">
                   <span className="text-white/80">✦</span>
                   {item}
@@ -37,13 +45,7 @@ function Skills() {
           <div className="col-start-3 col-span-1 p-6 border border-white/20 rounded-xl bg-transparent backdrop-blur-xs shadow-[inset_5px_2px_20px_rgba(255,255,255,0.1)]">
             <h3 className="text-2xl font-bold mb-4 italic">ML / Deep Learning</h3>
             <ul className="space-y-2 text-xl font-medium">
-              {[
-                "TensorFlow",
-                "Keras",
-                "Scikit-Learn",
-                "LLM",
-                "Neural Networks",
-              ].map((item, index) => (
+              {ML.map((item, index) => (
                 <li key={index} className="flex items-center gap-2">
                   <span className="text-white/80">✦</span>
                   {item}
@@ -55,7 +57,7 @@ function Skills() {
           <div className="col-start-4 col-span-1 p-6 border border-white/20 rounded-xl bg-transparent backdrop-blur-xs shadow-[inset_5px_2px_20px_rgba(255,255,255,0.1)]">
             <h3 className="text-2xl font-bold mb-4 italic">Data & Analytics</h3>
             <ul className="space-y-2 text-xl font-medium">
-              {["Pandas", "NumPy", "Power BI", "EDA", "Data Visualization"].map(
+              {Data.map(
                 (item, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <span className="text-white/80">✦</span>
@@ -69,14 +71,7 @@ function Skills() {
           <div className="col-start-1 col-span-2 p-6 border border-white/20 rounded-xl bg-transparent backdrop-blur-xs shadow-[inset_5px_2px_20px_rgba(255,255,255,0.1)]">
             <h3 className="text-2xl font-bold mb-4 italic">Tools & Platform</h3>
             <ul className="text-xl font-medium grid grid-cols-3 gap-x-10 gap-y-4">
-              {[
-                "Git",
-                "GitHub",
-                "Google Colab",
-                "VS Code",
-                "Jupyter",
-                "Flask",
-              ].map((item, index) => (
+              {Tools.map((item, index) => (
                 <li key={index} className="flex items-center gap-2">
                   <span className="text-white/80">✦</span>
                   {item}
@@ -88,7 +83,7 @@ function Skills() {
           <div className="col-start-3 col-span-1 p-6 border border-white/20 rounded-xl bg-transparent backdrop-blur-xs shadow-[inset_5px_2px_20px_rgba(255,255,255,0.1)]">
             <h3 className="text-2xl font-bold mb-4 italic">Databases</h3>
             <ul className="space-y-2 text-xl font-medium">
-              {["SQL", "MongoDB"].map((item, index) => (
+              {Databases.map((item, index) => (
                 <li key={index} className="flex items-center gap-2">
                   <span className="text-white/80">✦</span>
                   {item}
@@ -100,7 +95,7 @@ function Skills() {
           <div className="col-start-4 col-span-1 p-6 border border-white/20 rounded-xl bg-transparent backdrop-blur-xs shadow-[inset_5px_2px_20px_rgba(255,255,255,0.1)]">
             <h3 className="text-2xl font-bold mb-4 italic">Backend</h3>
             <ul className="space-y-2 text-xl font-medium">
-              {["FastAPI", "RestAPI"].map((item, index) => (
+              {Backend.map((item, index) => (
                 <li key={index} className="flex items-center gap-2">
                   <span className="text-white/80">✦</span>
                   {item}
