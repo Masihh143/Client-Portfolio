@@ -17,7 +17,7 @@ function Contact() {
 
     return (
         <div id="contact" className="min-h-screen bg-black text-white flex flex-row text-white">
-            <div className='w-1/2 mt-40'>
+            <div className='w-1/2 mt-40 mb-2'>
 
                 <div className='pl-30'>
 
@@ -38,7 +38,7 @@ function Contact() {
                             "Collaboration on real-world AI systems",
                         ].map((item, index) => (
                             <li key={index} className="flex items-center gap-2">
-                            <span className="text-white/80">✦</span>
+                            <span className="text-white/80">⚭</span>
                             {item}
                             </li>
                         ))}
@@ -66,7 +66,7 @@ function Contact() {
             </div>
 
 
-            <div className='w-1/2 flex flex-row justify-center items-center mt-40'>
+            <div className='w-1/2 flex flex-row justify-center items-center mt-40 mb-2'>
                 <div className="bg-white text-black w-130 h-180 rounded-3xl flex flex-col justify-between">
                     <div className="flex flex-col gap-4 p-6">
                         <label className="text-2xl font-normal">Your Message:</label>

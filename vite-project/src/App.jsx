@@ -6,6 +6,7 @@ import Skills from './components/Skills'
 
 import Achivements from './components/Achivements'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -13,16 +14,14 @@ function App() {
 
   return (
     <>
-    {/* <div className="App">
-      <h1>Welcome to My Vite React App!</h1>
-    </div> */}
-    <Navbar />
-    <Home />
-    <About />
-    <Skills />
+      <Navbar />
+      <Home />
+      <About />
+      <Skills />
 
-    <Achivements />
-    <Contact />
+      <Achivements />
+      <Contact />
+      <Footer />
     </>
   )
 }
