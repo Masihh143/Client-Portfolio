@@ -85,9 +85,39 @@ function Contact() {
 
                     <div className='relative'>
                         <img src={hand} alt="hand" />
-                        <button className="absolute top-15 left-46 bg-black text-white font-normal text-2xl p-2 h-40 w-40 flex flex-wrap justify-center items-center rounded-full hover:bg-black/90 transition">
-                            Send Message
-                        </button>
+                        <div className="group absolute top-15 left-46 w-40 h-40 flex items-center justify-center">
+
+                            {/* Black base circle */}
+                            <div className="relative w-full h-full bg-black rounded-full overflow-hidden flex items-center justify-center">
+
+                                {/* Purple animated circle */}
+                                <div className="
+                                absolute
+                                bottom-0
+                                left-1/2
+                                w-full
+                                h-full
+                                bg-[#2B6EFF]
+                                rounded-full
+                                transform
+                                -translate-x-1/2
+                                origin-bottom
+                                scale-0
+                                group-hover:scale-100
+                                transition-transform
+                                duration-500
+                                ease-out
+                                z-10
+                                "></div>
+
+                                <span className="relative z-20 text-white text-2xl font-normal p-2 flex-wrap text-center">
+                                    Send Message
+                                </span>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
