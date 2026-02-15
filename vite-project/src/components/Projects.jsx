@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import arrow from "../assets/Arrow.svg";
 import arrow2 from "../assets/ArrowSM.svg";
 import bg1 from "../assets/bg/CropAI.jpg";
@@ -81,6 +81,26 @@ const ProjectsList = [
 ]
 
 function Projects() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const CARD_WIDTH = 830;
+    const GAP = 40;
+    const VIEWPORT_WIDTH = 1800;
+
+    const STEP = CARD_WIDTH + GAP;
+    const CENTER_OFFSET = (VIEWPORT_WIDTH - CARD_WIDTH) / 2;
+
+    const next = () => {
+        if (currentIndex < ProjectsList.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+        }
+      };
+    
+      const prev = () => {
+        if (currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1);
+        }
+      };
   return (
     <>
         <div id='projects' className='min-h-screen flex flex-col justify-center items-center bg-black text-white'>
@@ -89,94 +109,128 @@ function Projects() {
                 <div className="flex flex-row items-center gap-5 justify-center">
                     <h1 className="text-8xl font-bold">Projects</h1>
                     <img className="mt-10" src={arrow} alt="arrow" />
-                    
                 </div>
             </div>
 
-            <p className='mb-10 text-xl font-medium'>( Selected projects focused on applied ML, system design, and real-world deployment )</p>
+            <p className='mb-50 text-xl font-medium'>( Selected projects focused on applied ML, system design, and real-world deployment )</p>
 
-            <div className="flex gap-10 py-10 px-5">
+            <div className="overflow-hidden"
+                style={{ width: `${VIEWPORT_WIDTH}px` }}
+            >
+                {/* TRACK */}
+                <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{
+                    gap: `${GAP}px`,
+                    transform: `translateX(-${
+                    currentIndex * STEP - CENTER_OFFSET
+                    }px)`,
+                }}
+                >
 
-                {ProjectsList.map(
-                ({ title, description, insights, bg, technologies, caseStudy, code }, index) => (
-                    
-                    <div
-                        key={index}
-                        className="w-[830px] h-[500px] rounded-2xl px-20 py-12 relative overflow-hidden"
-                        style={{ backgroundImage: `url(${bg})` }}
-                        >        
+                    {ProjectsList.map(
+                    ({ title, description, insights, bg, technologies, caseStudy, code }, index) => (
+                        
+                        <div
+                            key={index}
+                            className={`w-[830px] h-[500px] rounded-2xl px-20 py-12 relative overflow-hidden flex-shrink-0 transition-all duration-500 ${
+                                index === currentIndex
+                                  ? "scale-100 opacity-100"
+                                  : "scale-90 opacity-40"
+                              }`}
+                              style={{
+                                backgroundImage: `url(${bg})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                              }}
+                            >        
 
-                        {/* CONTENT */}
-                        <div className="relative z-10">
+                            <div className="absolute inset-0 bg-black/50" />
 
-                            {/* TITLE */}
-                            <h2 className="text-4xl font-semibold mb-1">
-                                {title}
-                            </h2>
+                            {/* CONTENT */}
+                            <div className="relative z-10">
 
-                            {/* DESCRIPTION */}
-                            <p className="text-white text-2xl font-normal mb-4">
-                                {description}
-                            </p>
+                                {/* TITLE */}
+                                <h2 className="text-4xl font-semibold mb-1">
+                                    {title}
+                                </h2>
 
-                            {/* INSIGHTS */}
-                            <ul className="space-y-2 mb-6">
-                                {insights.map((point, i) => (
-                                    <li key={i} className="flex items-start gap-2 text-xl font-normal">
-                                    <span>⌭</span>
-                                    <span>{point}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                                {/* DESCRIPTION */}
+                                <p className="text-white text-2xl font-normal mb-4">
+                                    {description}
+                                </p>
 
-                            {/* TECH STACK */}
-                            <div className="mb-6">
-
-                                <div className='flex items-center gap-2'>
-                                    <span className="text-base font-normal border-2 border-dashed py-1 px-2 mb-4 inline-block">
-                                        Tech Stack
-                                    </span>
-                                    <img src={arrow2} alt="arrow" />
-                                </div>
-
-                                <div className="flex flex-wrap justify-center gap-5">
-                                    {technologies.map((tech, i) => (
-                                    <span
-                                        key={i}
-                                        className="px-3 py-2 bg-white text-black text-base font-normal inline-block"
-                                    >
-                                        {tech}
-                                    </span>
+                                {/* INSIGHTS */}
+                                <ul className="space-y-2 mb-6">
+                                    {insights.map((point, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-xl font-normal">
+                                        <span>⌭</span>
+                                        <span>{point}</span>
+                                        </li>
                                     ))}
+                                </ul>
+
+                                {/* TECH STACK */}
+                                <div className="mb-6">
+
+                                    <div className='flex items-center gap-2'>
+                                        <span className="text-base font-normal border-2 border-dashed py-1 px-2 mb-4 inline-block">
+                                            Tech Stack
+                                        </span>
+                                        <img src={arrow2} alt="arrow" />
+                                    </div>
+
+                                    <div className="flex flex-wrap justify-center gap-5">
+                                        {technologies.map((tech, i) => (
+                                        <span
+                                            key={i}
+                                            className="px-3 py-2 bg-white text-black text-base font-normal inline-block"
+                                        >
+                                            {tech}
+                                        </span>
+                                        ))}
+                                    </div>
+
                                 </div>
 
-                            </div>
+                                {/* BUTTONS */}
+                                <div className="flex justify-center gap-10">
 
-                            {/* BUTTONS */}
-                            <div className="flex justify-center gap-10">
+                                    <a href={caseStudy} className="px-18 py-3 bg-white text-black rounded-xl text-base font-normal">
+                                        View Case Study
+                                    </a>
 
-                                <a href={caseStudy} className="px-18 py-3 bg-white text-black rounded-xl text-base font-normal">
-                                    View Case Study
-                                </a>
+                                    <a href={code} className="px-22 py-3 bg-white text-black rounded-xl text-base font-normal">
+                                        View Code
+                                    </a>
 
-                                <a href={code} className="px-22 py-3 bg-white text-black rounded-xl text-base font-normal">
-                                    View Code
-                                </a>
+                                </div>
 
                             </div>
 
                         </div>
 
-                    </div>
-
-                )
-                )}
-
+                    )
+                    )}
             </div>
+        </div>
 
             <div className='gap-20 flex flex-row justify-center items-center mt-20'>
-                <button className='h-25 w-25 rounded-full bg-white text-black'>Prev</button>
-                <button className='h-25 w-25 rounded-full bg-white text-black'>Next</button>
+            <button
+                onClick={prev}
+                className="h-25 w-25 rounded-full bg-white text-black text-xl disabled:opacity-30"
+                disabled={currentIndex === 0}
+                >
+                ‹
+                </button>
+
+                <button
+                onClick={next}
+                className="h-25 w-25 rounded-full bg-white text-black text-xl disabled:opacity-30"
+                disabled={currentIndex === ProjectsList.length - 1}
+                >
+                ›
+                </button>
             </div>
         </div>
     </>
