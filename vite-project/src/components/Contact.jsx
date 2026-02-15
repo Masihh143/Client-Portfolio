@@ -105,7 +105,7 @@ function Contact() {
                                 scale-0
                                 group-hover:scale-100
                                 transition-transform
-                                duration-500
+                                duration-300
                                 ease-out
                                 z-10
                                 "></div>
