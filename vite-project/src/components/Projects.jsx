@@ -85,7 +85,7 @@ function Projects() {
 
     const CARD_WIDTH = 830;
     const GAP = 40;
-    const VIEWPORT_WIDTH = 1800;
+    const VIEWPORT_WIDTH = window.innerWidth * 0.8;
 
     const STEP = CARD_WIDTH + GAP;
     const CENTER_OFFSET = (VIEWPORT_WIDTH - CARD_WIDTH) / 2;
@@ -122,9 +122,7 @@ function Projects() {
                 className="flex transition-transform duration-500 ease-out"
                 style={{
                     gap: `${GAP}px`,
-                    transform: `translateX(-${
-                    currentIndex * STEP - CENTER_OFFSET
-                    }px)`,
+                    transform: `translateX(${CENTER_OFFSET - currentIndex * STEP}px)`,
                 }}
                 >
 
@@ -145,7 +143,6 @@ function Projects() {
                               }}
                             >        
 
-                            <div className="absolute inset-0 bg-black/50" />
 
                             {/* CONTENT */}
                             <div className="relative z-10">
