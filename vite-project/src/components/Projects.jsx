@@ -1,4 +1,9 @@
 import React from 'react'
+import why from "../assets/bg/CropAi/why.jpg"
+import problem from "../assets/bg/CropAi/problem.jpg"
+import solution from "../assets/bg/CropAi/solution.jpg"
+import impact from "../assets/bg/CropAi/impact.jpg"
+import reflection from "../assets/bg/CropAi/reflection.jpg"
 
 const Project = [{
     title: "01. Crop AI",
@@ -145,7 +150,13 @@ function Projects() {
 
                         <div className='flex flex-row justify-center items-stretch gap-20 mb-30'>
 
-                            <div className='bg-white text-black w-[520px] px-5 py-10 rounded-2xl flex-wrap'>
+                            <div className='text-white w-[520px] px-5 py-10 rounded-2xl flex-wrap'
+                            style={{
+                                backgroundImage: `url(${why})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                              }}
+                            >
                                 <h2 className='text-3xl font-bold mb-2'>Why This Project?</h2>
                                 <ul className='space-y-2'>
                                     {reasons.map((reason, idx) => (
@@ -157,7 +168,13 @@ function Projects() {
                                 </ul>
                             </div>
 
-                            <div className='bg-white text-black w-[520px] px-5 py-10 rounded-2xl flex-wrap'>
+                            <div className='text-white w-[520px] px-5 py-10 rounded-2xl flex-wrap'
+                            style={{
+                                backgroundImage: `url(${problem})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                              }}
+                            >
                                 <h2 className='text-3xl font-bold mb-2'>The Problem</h2>
                                 <ul className='space-y-2'>
                                     {problems.map((problem, idx) => (
@@ -174,7 +191,13 @@ function Projects() {
 
                         <h2 className='px-20 text-5xl font-medium mb-15'>ML Pipeline</h2>
 
+
+
+
                          {/* PIPELINE NODES */}
+
+
+
                          <div className='mb-40'></div>
 
                         <div className='pl-20 mb-40'>
@@ -188,7 +211,6 @@ function Projects() {
                                             <span>{item.decision}</span>
                                         </div>
 
-                                        {/* Tradeoff */}
                                         <p className="ml-7 text-white/70 text-lg">
                                             <span className="font-medium text-white">
                                                 Trade-off:
@@ -206,7 +228,12 @@ function Projects() {
 
                         <div className='flex flex-row justify-center items-stretch gap-20 mb-50'>
 
-                            <div className='bg-white text-black w-[750px] px-5 py-10 rounded-2xl flex-wrap'>
+                            <div className='text-white w-[750px] px-5 py-10 rounded-2xl flex-wrap'
+                            style={{
+                                backgroundImage: `url(${solution})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                              }}>
                                 <h2 className='text-3xl font-bold mb-2'>Final Solution</h2>
                                 <ul className='space-y-2'>
                                     {solutions.map((solution, idx) => (
@@ -222,7 +249,13 @@ function Projects() {
 
                         <div className='flex flex-row justify-center items-start gap-20 mb-30'>
 
-                            <div className='bg-white text-black w-[520px] px-5 py-10 rounded-2xl flex-wrap'>
+                            <div className='text-white w-[520px] px-5 py-10 rounded-2xl flex-wrap'
+                            style={{
+                                backgroundImage: `url(${impact})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                              }}
+                            >
                                 <h2 className='text-3xl font-bold mb-2'>Impact & Results</h2>
                                 <ul className='space-y-2'>
                                     {impacts.map((impact, idx) => (
@@ -234,7 +267,13 @@ function Projects() {
                                 </ul>
                             </div>
 
-                            <div className='bg-white text-black w-[520px] px-5 py-10 rounded-2xl flex-wrap'>
+                            <div className='text-white w-[520px] px-5 py-10 rounded-2xl flex-wrap'
+                            style={{
+                                backgroundImage: `url(${reflection})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                              }}
+                            >
                                 <h2 className='text-3xl font-bold mb-2'>Reflection</h2>
                                 <ul className='space-y-2'>
                                     {reflections.map((reflection, idx) => (

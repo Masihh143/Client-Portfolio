@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import arrow from "../assets/Arrow.svg";
 import arrow2 from "../assets/ArrowSM.svg";
-import bg1 from "../assets/bg/CropAI.jpg";
-import bg2 from "../assets/bg/HealthBG.jpg";
-import bg3 from "../assets/bg/HealthSphere.jpg";
-import bg4 from "../assets/bg/StockAI.jpg";
-import bg5 from "../assets/bg/Transport.jpg";
+import bg1 from "../assets/bg/CropAi/cover.jpg";
+import bg2 from "../assets/bg/HealthAi/HealthBG.jpg";
+import bg3 from "../assets/bg/HealthSphere/HealthSphere.jpg";
+import bg4 from "../assets/bg/StockAi/StockAI.jpg";
+import bg5 from "../assets/bg/Transport/Transport.jpg";
 
 const ProjectsList = [
     {
