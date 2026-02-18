@@ -219,18 +219,67 @@ function Projects() {
 
                                 {/* SVG CONNECTION LINES */}
                                 <svg
-                                    className="absolute top-0 left-0 w-full h-[200px] pointer-events-none"
-                                    viewBox="0 0 1400 200"
-                                    preserveAspectRatio="none"
+                                className="absolute top-0 left-0 w-full h-[200px] pointer-events-none"
+                                viewBox="0 0 1400 200"
+                                preserveAspectRatio="none"
                                 >
-                                {/* center to nodes */}
-                                    <path d="M645 0 C 600 100, 100 50, 100 180" stroke="white" fill="none" strokeWidth="2"/>
-                                    <path d="M655 0 C 650 100, 350 100, 350 180" stroke="white" fill="none" strokeWidth="2"/>
-                                    <path d="M675 0 C 700 100, 600 100, 600 180" stroke="white" fill="none" strokeWidth="2"/>
-                                    <path d="M700 0 C 750 100, 900 100, 800 180" stroke="white" fill="none" strokeWidth="2"/>
-                                    <path d="M720 0 C 800 100, 1100 100, 1050 180" stroke="white" fill="none" strokeWidth="2"/>
-                                    <path d="M750 0 C 900 100, 1300 100, 1300 180" stroke="white" fill="none" strokeWidth="2"/>
+                                <defs>
+                                <marker
+                                    id="arrow"
+                                    markerWidth="10"
+                                    markerHeight="10"
+                                    refX="5"
+                                    refY="6"
+                                    orient="auto"
+                                    >
+                                    <path
+                                        d="M2,2 L10,6 L2,10"
+                                        stroke="white"
+                                        strokeWidth="1"
+                                        fill="none"
+                                    />
+                                    </marker>
+
+                                </defs>
+
+                                <path d="M645 0 C 600 100, 100 50, 100 180"
+                                        stroke="white"
+                                        fill="none"
+                                        strokeWidth="2"
+                                        markerEnd="url(#arrow)" />
+
+                                <path d="M655 0 C 650 100, 350 100, 350 180"
+                                        stroke="white"
+                                        fill="none"
+                                        strokeWidth="2"
+                                        markerEnd="url(#arrow)" />
+
+                                <path d="M675 0 C 700 100, 600 100, 600 180"
+                                        stroke="white"
+                                        fill="none"
+                                        strokeWidth="2"
+                                        markerEnd="url(#arrow)" />
+
+                                <path d="M700 0 C 750 100, 900 100, 800 180"
+                                        stroke="white"
+                                        fill="none"
+                                        strokeWidth="2"
+                                        markerEnd="url(#arrow)" />
+
+                                <path d="M720 0 C 800 100, 1100 100, 1050 180"
+                                        stroke="white"
+                                        fill="none"
+                                        strokeWidth="2"
+                                        markerEnd="url(#arrow)" />
+
+                                <path d="M750 0 C 900 100, 1300 100, 1300 180"
+                                        stroke="white"
+                                        fill="none"
+                                        strokeWidth="2"
+                                        markerEnd="url(#arrow)" />
+
                                 </svg>
+
 
 
                                 {/* NODES GRID */}
