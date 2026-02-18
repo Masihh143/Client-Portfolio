@@ -1,4 +1,11 @@
 import React from 'react'
+import a from "../assets/bg/CropAi/a.jpg"
+import b from "../assets/bg/CropAi/b.jpg"
+import c from "../assets/bg/CropAi/c.jpg"
+import d from "../assets/bg/CropAi/d.jpg"
+import e from "../assets/bg/CropAi/e.jpg"
+import f from "../assets/bg/CropAi/f.jpg"
+
 import why from "../assets/bg/CropAi/why.jpg"
 import problem from "../assets/bg/CropAi/problem.jpg"
 import solution from "../assets/bg/CropAi/solution.jpg"
@@ -41,7 +48,8 @@ const Project = [{
                 "Multiple crop types",
                 "Healthy vs diseased samples",
                 "Real-world image variability"
-            ]
+            ],
+            bg: a
         },
         {
             name: "Data Cleaning & Preprocessing",
@@ -50,7 +58,8 @@ const Project = [{
                 "Noise handling",
                 "Data augmentation",
                 "Class imbalance handling"
-            ]
+            ],
+            bg: b
         },
         {
             name: "Feature Learning (CNN)",
@@ -59,7 +68,8 @@ const Project = [{
                 "Convolution layers",
                 "Pooling layers",
                 "Feature maps"
-            ]
+            ],
+            bg: c
         },
         {
             name: "Model Training",
@@ -68,7 +78,8 @@ const Project = [{
                 "Training-validation split",
                 "Loss function & optimizer",
                 "Hyperparameter tuning"
-            ]
+            ],
+            bg: d
         },
         {
             name: "Evaluation",
@@ -77,7 +88,8 @@ const Project = [{
                 "Confusion matrix",
                 "Overfitting checks",
                 "Generalization testing"
-            ]
+            ],
+            bg: e
         },
         {
             name: "Deployment & Inference",
@@ -86,7 +98,8 @@ const Project = [{
                 "API-based inference",
                 "Input image → prediction pipeline",
                 "Integration-ready architecture"
-            ]
+            ],
+            bg: f
         }
     
     ],
@@ -191,14 +204,73 @@ function Projects() {
 
                         <h2 className='px-20 text-5xl font-medium mb-15'>ML Pipeline</h2>
 
+                        
+                        <div className="mb-40 flex flex-col items-center relative">
+
+                            {/* PIPELINE TITLE */}
+                            <div className="text-xl font-medium bg-white text-black px-4 py-2 rounded-md mb-2 z-10">
+                                {pipeline}
+                            </div>
 
 
+                            {/* CONTAINER */}
+                            <div className="relative w-full max-w-[1400px]">
 
-                         {/* PIPELINE NODES */}
+
+                                {/* SVG CONNECTION LINES */}
+                                <svg
+                                    className="absolute top-0 left-0 w-full h-[200px] pointer-events-none"
+                                    viewBox="0 0 1400 200"
+                                    preserveAspectRatio="none"
+                                >
+                                {/* center to nodes */}
+                                    <path d="M645 0 C 600 100, 100 50, 100 180" stroke="white" fill="none" strokeWidth="2"/>
+                                    <path d="M655 0 C 650 100, 350 100, 350 180" stroke="white" fill="none" strokeWidth="2"/>
+                                    <path d="M675 0 C 700 100, 600 100, 600 180" stroke="white" fill="none" strokeWidth="2"/>
+                                    <path d="M700 0 C 750 100, 900 100, 800 180" stroke="white" fill="none" strokeWidth="2"/>
+                                    <path d="M720 0 C 800 100, 1100 100, 1050 180" stroke="white" fill="none" strokeWidth="2"/>
+                                    <path d="M750 0 C 900 100, 1300 100, 1300 180" stroke="white" fill="none" strokeWidth="2"/>
+                                </svg>
 
 
+                                {/* NODES GRID */}
+                                <div className="grid grid-cols-6 gap-10 pt-[200px]">
 
-                         <div className='mb-40'></div>
+                                {nodes.map((node, idx) => (
+                                    <div key={idx} className="flex flex-col items-center">
+
+                                    {/* NODE BOX */}
+                                    <div
+                                        className="text-lg text-center w-[180px] font-medium p-4 rounded-md mb-4"
+                                        style={{
+                                        backgroundImage: `url(${node.bg})`,
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center",
+                                        }}
+                                    >
+                                        {node.name}
+                                    </div>
+
+
+                                    {/* POINTS */}
+                                    <ul className="space-y-2">
+                                        {node.points.map((point, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-base text-white">
+                                            <span>✦</span>
+                                            <span>{point}</span>
+                                        </li>
+                                        ))}
+                                    </ul>
+
+                                    </div>
+                                ))}
+
+                            </div>
+
+                        </div>
+
+                        </div>
+
 
                         <div className='pl-20 mb-40'>
                             <h2 className='text-5xl font-medium mb-7'>Key Decisions & Trade-offs</h2>
