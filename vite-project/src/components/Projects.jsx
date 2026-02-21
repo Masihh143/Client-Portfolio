@@ -1,12 +1,19 @@
 import React from 'react'
-import a from "../assets/bg/CropAi/a.jpg"
-import b from "../assets/bg/CropAi/b.jpg"
-import c from "../assets/bg/CropAi/c.jpg"
-import d from "../assets/bg/CropAi/d.jpg"
-import e from "../assets/bg/CropAi/e.jpg"
-import f from "../assets/bg/CropAi/f.jpg"
+import a1 from "../assets/bg/CropAi/a.jpg"
+import b1 from "../assets/bg/CropAi/b.jpg"
+import c1 from "../assets/bg/CropAi/c.jpg"
+import d1 from "../assets/bg/CropAi/d.jpg"
+import e1 from "../assets/bg/CropAi/e.jpg"
+import f1 from "../assets/bg/CropAi/f.jpg"
 
-import why from "../assets/bg/CropAi/why.jpg"
+import a2 from "../assets/bg/HealthAi/a.jpg"
+import b2 from "../assets/bg/HealthAi/b.jpg"
+import c2 from "../assets/bg/HealthAi/c.jpg"
+import d2 from "../assets/bg/HealthAi/d.jpg"
+import e2 from "../assets/bg/HealthAi/e.jpg"
+import f2 from "../assets/bg/HealthAi/f.jpg"
+
+import reason from "../assets/bg/CropAi/reason.jpg"
 import problem from "../assets/bg/CropAi/problem.jpg"
 import solution from "../assets/bg/CropAi/solution.jpg"
 import impact from "../assets/bg/CropAi/impact.jpg"
@@ -49,7 +56,7 @@ const Project = [{
                 "Healthy vs diseased samples",
                 "Real-world image variability"
             ],
-            bg: a
+            bg: a1
         },
         {
             name: "Data Cleaning & Preprocessing",
@@ -59,7 +66,7 @@ const Project = [{
                 "Data augmentation",
                 "Class imbalance handling"
             ],
-            bg: b
+            bg: b1
         },
         {
             name: "Feature Learning (CNN)",
@@ -69,7 +76,7 @@ const Project = [{
                 "Pooling layers",
                 "Feature maps"
             ],
-            bg: c
+            bg: c1
         },
         {
             name: "Model Training",
@@ -79,7 +86,7 @@ const Project = [{
                 "Loss function & optimizer",
                 "Hyperparameter tuning"
             ],
-            bg: d
+            bg: d1
         },
         {
             name: "Evaluation",
@@ -89,7 +96,7 @@ const Project = [{
                 "Overfitting checks",
                 "Generalization testing"
             ],
-            bg: e
+            bg: e1
         },
         {
             name: "Deployment & Inference",
@@ -99,7 +106,7 @@ const Project = [{
                 "Input image → prediction pipeline",
                 "Integration-ready architecture"
             ],
-            bg: f
+            bg: f1
         }
     
     ],
@@ -137,6 +144,133 @@ const Project = [{
         "Gained experience deploying ML models beyond notebooks",
         "Would explore lightweight models for future scalability"
     ]
+},
+{
+    title: "Health AI",
+    description: "( AI-Assisted Medical Image Classification System )",
+    role: "Machine Learning Engineer",
+    scope: "End-to-end experimental ML system ",
+    focus: "Medical Imaging, CNNs, Model Evaluation",
+
+    insights: [
+        "Built a CNN-based system to classify medical images (disease vs non-disease)",
+        "Designed a transparent ML pipeline with strong validation checks",
+        "Positioned AI as decision support, not a clinical replacement"
+    ],
+
+    reasons: [
+        "Medical image interpretation is slow and resource-intensive",
+        "Early-stage disease signals are subtle and often missed",
+        "Expert availability is limited in resource-constrained settings",
+        "CNNs can assist early triage without replacing clinicians"
+    ],
+
+    problems: [
+        "Medical images vary widely in quality and resolution",
+        "Public datasets are small, noisy, and class-imbalanced",
+        "High risk of overfitting and misleading performance",
+        "Ethical responsibility to avoid clinical overclaiming"
+    ],
+
+    pipeline: "Health-AI ML pipeline",
+    nodes: [
+        {
+            name: "Collection",
+            points: [
+                "Medical Images",
+                "Grayscale scans",
+                "Disease labels",
+                "Dataset imbalance"
+            ],
+            bg: a2
+        },
+        {
+            name: "Preprocessing",
+            points: [
+                "Resize & normalize",
+                "Noise handling",
+                "Data integrity",
+                "Contrast Consistency"
+            ],
+            bg: b2
+        },
+        {
+            name: "Features",
+            points: [
+                "Spatial patterns",
+                "Convolutions",
+                "Pooling",
+                "Feature maps"
+            ],
+            bg: c2
+        },
+        {
+            name: "Model Training",
+            points: [
+                "CNN design",
+                "Training-validation split",
+                "Loss optimization",
+                "Regularization"
+            ],
+            bg: d2
+        },
+        {
+            name: "Evaluation",
+            points: [
+                "Accuracy",
+                "Loss curves",
+                "Overfitting checks",
+                "Validation behavior"
+            ],
+            bg: e2
+        },
+        {
+            name: "Limits",
+            points: [
+                "Offline only",
+                "No clinical claims",
+                "Dataset constraints",
+                "Ethical scope"
+            ],
+            bg: f2
+        }
+    
+    ],
+
+    tradeOffs: [
+        {
+          decision: "Used simple CNNs instead of deep architectures",
+          tradeoff: "Better interpretability, lower peak accuracy"
+        },
+        {
+          decision: "Focused on validation behavior, not training metrics",
+          tradeoff: "Slower iteration, higher confidence"
+        },
+        {
+          decision: "Avoided deployment framing",
+          tradeoff: "Educational scope, ethical clarity"
+        }
+      ],
+      
+
+    solutions: [
+        "Supervised CNN-based medical image classification system",
+        "Clean preprocessing with controlled normalization",
+        "Transparent evaluation using training & validation curves",
+        "Educational, offline ML workflow"
+    ],
+
+    impacts: [
+        "Reduced misclassification compared to early baselines",
+        "Demonstrated feasibility of CNNs on small medical datasets",
+        "Converted abstract “AI in healthcare” into a reproducible pipeline"
+    ],
+
+    reflections:[
+        "Learned the importance of restraint over complexity",
+        "Understood risks of overfitting in medical ML",
+        "Gained appreciation for explainability and safety"
+    ]
 }]
 
 function Projects() {
@@ -165,12 +299,12 @@ function Projects() {
 
                             <div className='text-white w-[520px] px-5 py-10 rounded-2xl flex-wrap'
                             style={{
-                                backgroundImage: `url(${why})`,
+                                backgroundImage: `url(${reason})`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
                               }}
                             >
-                                <h2 className='text-3xl font-bold mb-2'>Why This Project?</h2>
+                                <h2 className='text-3xl font-bold mb-2'>reason This Project?</h2>
                                 <ul className='space-y-2'>
                                     {reasons.map((reason, idx) => (
                                         <li key={idx} className='flex items-start gap-3 text-xl font-medium'>
@@ -208,7 +342,7 @@ function Projects() {
                         <div className="mb-40 flex flex-col items-center relative">
 
                             {/* PIPELINE TITLE */}
-                            <div className="text-xl font-medium bg-white text-black px-4 py-2 rounded-md mb-2 z-10">
+                            <div className="text-xl font-medium bg-white text-black px-4 py-3 rounded-md mb-2 z-10">
                                 {pipeline}
                             </div>
 
@@ -417,7 +551,7 @@ function Projects() {
 
             <div className="flex justify-start">
                 <div className='h-35 w-35 rounded-full border-2 border border-white/50 flex items-center justify-center'>
-                    <button className="h-25 w-25 flex items-center justify-center bg-white text-black rounded-full border border-white/30 hover:scale-110 transition">
+                    <button className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pr-1 pb-1 rounded-full border border-white/30 hover:scale-110 transition">
                         ‹
                     </button>
                 </div>
@@ -431,7 +565,7 @@ function Projects() {
 
             <div className="flex justify-end">
                 <div className='h-35 w-35 rounded-full border-2 border border-white/50 flex items-center justify-center'>
-                    <button className="h-25 w-25 flex items-center justify-center bg-white text-black rounded-full border border-white/30 hover:scale-110 transition">
+                    <button className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pl-1 pb-1 rounded-full border border-white/30 hover:scale-110 transition">
                         ›
                     </button>
                 </div>
