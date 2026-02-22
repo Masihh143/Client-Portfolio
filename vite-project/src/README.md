@@ -11,19 +11,25 @@
         ""
     ],
 
-    reasons: [
-        "",
-        "",
-        "",
-        ""
-    ],
+    reasons: {
+            points: [
+                "",
+                "",
+                "",
+                ""
+            ],
+            bg: 
+        },
 
-    problems: [
-        "",
-        "",
-        "",
-        ""
-    ],
+    problems:{
+            points: [
+                "",
+                "",
+                "",
+                ""
+            ],
+            bg: 
+        },
 
     pipeline: "",
     nodes: [
@@ -45,7 +51,7 @@
                 "",
                 ""
             ],
-            bg: 
+            bg: b1
         },
         {
             name: "",
@@ -106,21 +112,30 @@
       ],
       
 
-    solutions: [
-        "",
-        "",
-        ""
-    ],
+    solutions: {
+        points: [
+            "",
+            "",
+            ""
+        ],
+        bg: 
+    },
 
-    impacts: [
-        "",
-        "",
-        ""
-    ],
+    impacts: {
+        points: [
+            "",
+            "",
+            ""
+        ],
+        bg: 
+    },
 
-    reflections:[
-        "",
-        "",
-        ""
-    ]
-}]
+    reflections: {
+        points: [
+            "",
+            "",
+            ""
+        ],  
+        bg: 
+    },
+},
