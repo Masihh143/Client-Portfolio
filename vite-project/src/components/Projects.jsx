@@ -21,6 +21,27 @@ import d3 from "../assets/bg/HealthSphere/d.jpg"
 import e3 from "../assets/bg/HealthSphere/e.jpg"
 import f3 from "../assets/bg/HealthSphere/f.jpg"
 
+import a4 from "../assets/bg/StockAi/a.jpg"
+import b4 from "../assets/bg/StockAi/b.jpg"
+import c4 from "../assets/bg/StockAi/c.jpg"
+import d4 from "../assets/bg/StockAi/d.jpg"
+import e4 from "../assets/bg/StockAi/e.jpg"
+import f4 from "../assets/bg/StockAi/f.jpg"
+
+import a5 from "../assets/bg/Transport/a.jpg"
+import b5 from "../assets/bg/Transport/b.jpg"
+import c5 from "../assets/bg/Transport/c.jpg"
+import d5 from "../assets/bg/Transport/d.jpg"
+import e5 from "../assets/bg/Transport/e.jpg"
+import f5 from "../assets/bg/Transport/f.jpg"
+
+import a6 from "../assets/bg/Rag/a.jpg"
+import b6 from "../assets/bg/Rag/b.jpg"
+import c6 from "../assets/bg/Rag/c.jpg"
+import d6 from "../assets/bg/Rag/d.jpg"
+import e6 from "../assets/bg/Rag/e.jpg"
+import f6 from "../assets/bg/Rag/f.jpg"
+
 import reason1 from "../assets/bg/CropAi/reason.jpg"
 import problem1 from "../assets/bg/CropAi/problem.jpg"
 import solution1 from "../assets/bg/CropAi/solution.jpg"
@@ -38,6 +59,24 @@ import problem3 from "../assets/bg/HealthSphere/problem.jpg"
 import solution3 from "../assets/bg/HealthSphere/solution.jpg"
 import impact3 from "../assets/bg/HealthSphere/impact.jpg"
 import reflection3 from "../assets/bg/HealthSphere/reflection.jpg"
+
+import reason4 from "../assets/bg/StockAi/reason.jpg"
+import problem4 from "../assets/bg/StockAi/problem.jpg"
+import solution4 from "../assets/bg/StockAi/solution.jpg"
+import impact4 from "../assets/bg/StockAi/impact.jpg"
+import reflection4 from "../assets/bg/StockAi/reflection.jpg"
+
+import reason5 from "../assets/bg/Transport/reason.jpg"
+import problem5 from "../assets/bg/Transport/problem.jpg"
+import solution5 from "../assets/bg/Transport/solution.jpg"
+import impact5 from "../assets/bg/Transport/impact.jpg"
+import reflection5 from "../assets/bg/Transport/reflection.jpg"
+
+import reason6 from "../assets/bg/Rag/reason.jpg"
+import problem6 from "../assets/bg/Rag/problem.jpg"
+import solution6 from "../assets/bg/Rag/solution.jpg"
+import impact6 from "../assets/bg/Rag/impact.jpg"
+import reflection6 from "../assets/bg/Rag/reflection.jpg"
 
 const Project = [{
     title: "01. Crop AI",
@@ -471,7 +510,452 @@ const Project = [{
             ],
             bg: reflection3
         }
-}]
+},
+{
+    title: "04. StockAI",
+    description: "( Explainable Stock Market Analytics & Decision-Support Platform )",
+    role: "ML Engineer & Full-Stack Developer",
+    scope: "Modular, explainable analytics system (planned / in progress)",
+    focus: "Time-series ML, risk modeling, explainability, GenAI",
+
+    insights: [
+        "Designed an architecture-first stock analytics platform for retail investors",
+        "Focused on explainability, uncertainty, and risk awareness, not trading",
+        "Positioned AI as a narrator and analyst, not a decision-maker"
+    ],
+
+    reasons: {
+            points: [
+                "Retail investors face overwhelming, fragmented market data",
+                "Most tools either overload users with indicators or sell “magic predictions”",
+                "Risk, uncertainty, and regime context are rarely explained clearly",
+                "Beginners need understanding before action, not buy/sell signals"
+            ],
+            bg: reason4
+        },
+
+    problems:{
+            points: [
+                "Market data is noisy and non-deterministic by nature",
+                "Price-only forecasting ignores regime and risk context",
+                "Predictions are often presented without uncertainty or explanation",
+                "Beginner tools optimize for engagement, not understanding"
+            ],
+            bg: problem4
+        },
+
+    pipeline: "StockAI ML pipeline",
+    nodes: [
+        {
+            name: "Ingestion",
+            points: [
+                "Historical prices",
+                "Indices",
+                "Asset metadata",
+                "Clean pipelines"
+            ],
+            bg: a4
+        },
+        {
+            name: "Analytics",
+            points: [
+                "Returns",
+                "Indicators",
+                "Volatility",
+                "Regimes"
+            ],
+            bg: b4
+        },
+        {
+            name: "Risk",
+            points: [
+                "Risk metrics",
+                "Drawdowns",
+                "Early warnings",
+                "Portfolio exposure"
+            ],
+            bg: c4
+        },
+        {
+            name: "Forecasting",
+            points: [
+                "Time-series models",
+                "Regime prediction",
+                "Error tracking",
+                "Probabilities"
+            ],
+            bg: d4
+        },
+        {
+            name: "Explanation",
+            points: [
+                "GenAI layer",
+                "Plain language",
+                "Uncertainty framing",
+                "No advice"
+            ],
+            bg: e4
+        },
+        {
+            name: "Experience",
+            points: [
+                "Guided flow",
+                "Dashboards",
+                "Clarity first",
+                "Educational scope"
+            ],
+            bg: f4
+        }
+    
+    ],
+
+    tradeOffs: [
+        {
+          decision: "Avoided trading or execution features",
+          tradeoff: "Less excitement, more responsibility"
+        },
+        {
+          decision: "Required doctor verification before result delivery",
+          tradeoff: "More design effort, higher clarity"
+        },
+        {
+          decision: "Framed outputs probabilistically instead of deterministically",
+          tradeoff: "Less certainty, more honesty"
+        },
+        {
+            decision: "Used GenAI for explanations, not recommendations",
+            tradeoff: "Slower guidance, stronger trust"
+        }
+      ],
+      
+
+    solutions: {
+        points: [
+            "Market analytics that explain trends and volatility",
+            "Risk intelligence that surfaces uncertainty and exposure",
+            "Forecasting with visible error and confidence bounds",
+            "GenAI assistant that translates signals into plain language"
+        ],
+        bg: solution4
+    },
+
+    impacts: {
+        points: [
+            "Quantitative evaluation via RMSE / MAPE vs baselines",
+            "Regime classification accuracy tracking",
+            "Precision of risk early-warning signals",
+            "Reusable, documented architecture for learning and interviews"
+        ],
+        bg: impact4
+    },
+
+    reflections: {
+        points: [
+            "Learned that finance ML is about probabilities, not promises",
+            "Understood overfitting and confidence calibration as design problems",
+            "Shifted focus from “smart models” to responsible communication",
+            "Reframed success as clarity and trust, not raw accuracy"
+        ],  
+        bg: reflection4
+    },
+},
+{
+    title: "05. PTOML",
+    description: "( Public Transport Optimization using Machine Learning )",
+    role: "Machine Learning Engineer",
+    scope: "End-to-end ML pipeline + interactive dashboard",
+    focus: "Demand prediction, scenario analysis, interpretable ML",
+
+    insights: [
+        "Built a supervised ML system to predict transport demand and efficiency",
+        "Designed an interactive dashboard for what-if scenario exploration",
+        "Focused on interpretability and usability for non-technical planners"
+    ],
+
+    reasons: {
+            points: [
+                "Public transport planning is often reactive rather than predictive",
+                "Peak overcrowding and off-peak underuse are hard to anticipate",
+                "Decisions rely on static reports instead of datadriven scenarios",
+                "Planners need insight without writing code"
+            ],
+            bg: reason5
+        },
+
+    problems:{
+            points: [
+                "Transport demand fluctuates with time, load, and route characteristics",
+                "Operational data is noisy and highly correlated",
+                "Simple heuristics fail to capture non-linear patterns",
+                "ML insights often remain inaccessible to nontechnical teams"
+            ],
+            bg: problem5
+        },
+
+    pipeline: "PTO ML pipeline",
+    nodes: [
+        {
+            name: "Collection",
+            points: [
+                "Route data",
+                "Passenger metrics",
+                "Time indicators",
+                "Operations"
+            ],
+            bg: a5
+        },
+        {
+            name: "Preprocessing",
+            points: [
+                "Cleaning",
+                "Feature selection",
+                "Correlational control",
+                "Data splits"
+            ],
+            bg: b5
+        },
+        {
+            name: "Modeling",
+            points: [
+                "Regression models",
+                "Non  linearity",
+                "Tuning",
+                "Stability"
+            ],
+            bg: c5
+        },
+        {
+            name: "Evaluation",
+            points: [
+                "Error metrics",
+                "Trend checks",
+                "Baselines",
+                "Generalization"
+            ],
+            bg: d5
+        },
+        {
+            name: "Simulation",
+            points: [
+                "Scenario inputs",
+                "Parameter changes",
+                "Instant prediction",
+                "Comprasions"
+            ],
+            bg: e5
+        },
+        {
+            name: "Interface",
+            points: [
+                "Streamlit UI",
+                "Sliders",
+                "Charts",
+                "Accessibility"
+            ],
+            bg: f5
+        }
+    
+    ],
+
+    tradeOffs: [
+        {
+          decision: "Used classical ML models instead of deep learning",
+          tradeoff: "Lower complexity, higher interpretability"
+        },
+        {
+          decision: "Reduced feature set to avoid multicollinearity",
+          tradeoff: "Less data, clearer signals"
+        },
+        {
+          decision: "Designed a minimal dashboard instead of dense controls",
+          tradeoff: "Fewer parameters, better usability"
+        },
+        {
+            decision: "Focused on offline prediction rather than real-time control",
+            tradeoff: "No live feeds, stable experimentation"
+        }
+      ],
+      
+
+    solutions: {
+        points: [
+            "Supervised ML model predicting transport demand and efficiency",
+            "Clean feature pipeline with interpretable inputs",
+            "Interactive dashboard for instant scenario testing",
+            "Decision-support tool for planners, not an automated system"
+        ],
+        bg: solution5
+    },
+
+    impacts: {
+        points: [
+            "Stable predictions aligned with known demand patterns",
+            "Scenario outputs behaved realistically under parameter changes",
+            "Demonstrated how ML becomes more valuable through interaction",
+            "Lowered the barrier for non-technical users to explore ML insights"
+        ],
+        bg: impact5
+    },
+
+    reflections: {
+        points: [
+            "Learned that interpretability drives trust more than accuracy alone",
+            "Saw how UI design shapes how ML outputs are perceived",
+            "Understood scenario design as a core ML product skill",
+            "Shifted mindset from building models to building decision tools"
+        ],  
+        bg: reflection5
+    },
+},
+{
+    title: "06. RAG-Based Assistant",
+    description: "( Course-Aware Retrieval-Augmented Teaching Assistant )",
+    role: "Data Science Learner & AI Developer",
+    scope: "End-to-end RAG pipeline (document ingestion → retrieval → grounded answers)",
+    focus: "Retrieval-augmented generation, trustworthy AI, educational alignment",
+
+    insights: [
+        "Built a RAG system that answers only from course material",
+        "Designed a retrieval-first pipeline to reduce hallucinations",
+        "Turned a generic chatbot into a course-aware teaching assistant"
+    ],
+
+    reasons: {
+            points: [
+                "Generic AI chatbots often hallucinate or drift off syllabus",
+                "Learners need answers aligned with their specific course, not the internet",
+                "Trust is critical in education-confident but wrong answers are harmful",
+                "RAG offers a way to ground LLMs in verified learning material"
+            ],
+            bg: reason6
+        },
+
+    problems:{
+            points: [
+                "LLMs answer from broad, uncontrolled knowledge",
+                "Course-specific or niche questions often get incorrect responses",
+                "Hallucinations undermine trust in educational tools",
+                "Learners cannot easily verify where an answer comes from"
+            ],
+            bg: problem6
+        },
+
+    pipeline: "RAG ML pipeline",
+    nodes: [
+        {
+            name: "Ingestion",
+            points: [
+                "PDFs",
+                "Notes",
+                "Course material",
+                "Source control"
+            ],
+            bg: a6
+        },
+        {
+            name: "Chunking",
+            points: [
+                "Semantic splits",
+                "Context units",
+                "Size tuning",
+                "Structure"
+            ],
+            bg: b6
+        },
+        {
+            name: "Embedding",
+            points: [
+                "Text vectors",
+                "Encoding",
+                "Similarity space",
+                "Consistency"
+            ],
+            bg: c6
+        },
+        {
+            name: "Indexing",
+            points: [
+                "FAISS",
+                "Vector store",
+                "Search structure",
+                "Retrieval speed"
+            ],
+            bg: d6
+        },
+        {
+            name: "Retrieval",
+            points: [
+                "Query embedding",
+                "Top-k chunks",
+                "Context ranking",
+                "Relevance"
+            ],
+            bg: e6
+        },
+        {
+            name: "Generation",
+            points: [
+                "Prompt constraints",
+                "Context grounding",
+                "Answer synthesis",
+                "Hallucination conrol"
+            ],
+            bg: f6
+        }
+    
+    ],
+
+    tradeOffs: [
+        {
+          decision: "Forced retrieval before every generation",
+          tradeoff: "Less flexibility, higher trust"
+        },
+        {
+          decision: "Used static documents instead of live sources",
+          tradeoff: "Limited scope, predictable behavior"
+        },
+        {
+          decision: "Prioritized clean pipeline over advanced features",
+          tradeoff: "No feedback loops, higher transparency"
+        },
+        {
+            decision: "Tuned chunk size carefully",
+            tradeoff: "Balancing context vs retrieval precision"
+        }
+      ],
+      
+
+    solutions: {
+        points: [
+            "A retrieval-augmented teaching assistant trained on course material",
+            "Answers generated only from retrieved notes, not general knowledge",
+            "Conversational responses that mirror instructor language",
+            "System behaves like a course-aware TA, not a generic chatbot"
+        ],
+        bg: solution6
+    },
+
+    impacts: {
+        points: [
+            "Retrieved relevant course sections consistently",
+            "Reduced hallucinations compared to vanilla LLMs",
+            "Answers aligned closely with syllabus terminology",
+            "Clear improvement in trust and usefulness for learners"
+        ],
+        bg: impact6
+    },
+
+    reflections: {
+        points: [
+            "Learned that retrieval quality matters more than model size",
+            "Saw prompt constraints as a UX and trust decision",
+            "Understood RAG as an information-architecture problem",
+            "Shifted mindset from “smart answers” to grounded reasoning systems"
+        ],  
+        bg: reflection6
+    },
+},
+]
 
 function Projects() {
 
