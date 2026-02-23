@@ -1,8 +1,165 @@
 @import "tailwindcss";
 
-/* @font-face {
-  font-family: "Google Sans Code";
-  src: url("./assets/fonts/GoogleSansCode-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-} */
+@theme {
+  --font-product: "Product Sans", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+}
+
+@layer base {
+
+  /* Product Sans */
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Product Sans";
+    src: url("./assets/fonts/google-sans/ProductSans-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  /* Satoshi */
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-BoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-LightItalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-MediumItalic.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("./assets/fonts/satoshi (1)/Satoshi-BlackItalic.otf") format("opentype");
+    font-weight: 900;
+    font-style: italic;
+  }
+}

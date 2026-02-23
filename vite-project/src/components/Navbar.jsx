@@ -51,7 +51,7 @@ const Navbar = () => {
     }, []);
 
     return (
-      <nav className="min-h-32 bg-black text-white flex flex-row justify-between fixed top-0 left-0 right-0 px-15 py-10 z-100 font-googleSansCode font-light text-base leading-none tracking-tightest text-base">
+      <nav className="min-h-32 bg-black text-white flex flex-row justify-between fixed top-0 left-0 right-0 px-15 py-10 z-100 font-product font-light text-base leading-none tracking-tightest text-base">
       <div className='logo'>
         <img src={logo} alt={logo} />
       </div>

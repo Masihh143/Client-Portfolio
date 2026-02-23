@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import arrow from "../assets/Arrow.svg";
 import arrow2 from "../assets/ArrowSM.svg";
 import bg1 from "../assets/bg/CropAi/cover.jpg";

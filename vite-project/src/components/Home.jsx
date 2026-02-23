@@ -81,7 +81,7 @@ function Home() {
           />
         </div>
 
-        <p className="text-xl tracking-tight justify-self-center-safe pr-40">
+        <p className="text-xl font-satoshi font-light justify-self-center-safe pr-40">
           I build data-driven systems that turn complex data into clear decisions.
         </p>
 
