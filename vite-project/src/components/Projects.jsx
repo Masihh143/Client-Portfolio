@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect,useRef } from 'react'
 
 import a1 from "../assets/bg/CropAi/a.jpg"
 import b1 from "../assets/bg/CropAi/b.jpg"
@@ -958,6 +958,11 @@ const Project = [{
 ]
 
 function Projects() {
+    
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const containerRef = useRef(null)
+    
+    const currentProject = Project[currentIndex]
 
     const scrollToTop = () => {
         containerRef.current?.scrollIntoView({
@@ -974,17 +979,27 @@ function Projects() {
         }
       }
       
-      const prevProject = () => {
+    const prevProject = () => {
         if (currentIndex > 0) {
           setCurrentIndex(prev => prev - 1)
           scrollToTop()
         }
-      }
+    }
 
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const containerRef = useRef(null)
+    useEffect(() => {
+        const navbarHeight = 200
+      
+        const yOffset = -navbarHeight
+        const element = containerRef.current
+      
+        const y =
+          element.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset
+      
+        window.scrollTo({ top: y, behavior: "smooth" })
+    }, [currentIndex])
 
-    const currentProject = Project[currentIndex]
 
     if (!currentProject) return null
 
@@ -1283,7 +1298,7 @@ function Projects() {
                     <button
                     onClick={prevProject}
                     disabled={currentIndex === 0}
-                    className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pr-1 pb-1 rounded-full border border-white/30 hover:scale-110 transition">
+                    className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pr-1 pb-1 rounded-full border border-white/30 hover:scale-110 transition disabled:opacity-30">
                         ‹
                     </button>
                 </div>
@@ -1300,7 +1315,7 @@ function Projects() {
                     <button
                     onClick={nextProject}
                     disabled={currentIndex === Project.length - 1}
-                    className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pl-1 pb-1 rounded-full border border-white/30 hover:scale-110 transition">
+                    className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pl-1 pb-1 rounded-full border border-white/30 hover:scale-110 transition disabled:opacity-30">
                         ›
                     </button>
                 </div>
