@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom"
 import arrow from "../assets/Arrow.svg";
 import arrow2 from "../assets/ArrowSM.svg";
 import bg1 from "../assets/bg/CropAi/cover.jpg";
@@ -9,6 +10,7 @@ import bg5 from "../assets/bg/Transport/Transport.jpg";
 
 const ProjectsList = [
     {
+        id: "crop-ai",
         title: "Crop AI",
         description: "AI Crop Disease Detection & Advisory System.",
         insights: [
@@ -19,10 +21,10 @@ const ProjectsList = [
         ],
         bg: bg1,
         technologies: ["Python", "FastAPI" , "CNN", "OpenCV" , "TensorFlow", "Render"],
-        caseStudy: "#",
         code: "#"
     },
     {
+        id: "health-ai",
         title: "Health Ai",
         description: "AI-Assisted Medical Imaging System",
         insights: [
@@ -33,10 +35,10 @@ const ProjectsList = [
         ],
         bg: bg2,
         technologies: ["Python", "FastAPI", "OpenCV" , "Deep Learning", "JWT"],
-        caseStudy: "#",
         code: "#"
     },
     {
+        id: "health-sphere",
         title: "HealthSphere",
         description: "Full-Stack Digital Healthcare Platform",
         insights: [
@@ -47,10 +49,10 @@ const ProjectsList = [
         ],
         bg: bg3,
         technologies: ["Next.js", "FastAPI", "JWT" , "RBAC", "Cloud Deployement"],
-        caseStudy: "#",
         code: "#"
     },
     {
+        id: "stock-ai",
         title: "StockAI",
         description: "AI Stock Market Analytics & Risk Intelligence Platform",
         insights: [
@@ -61,10 +63,10 @@ const ProjectsList = [
         ],
         bg: bg4,
         technologies: ["Python", "FastAPI", "ML" , "Time-Series", "React" , "GenAi" , "SQL"],
-        caseStudy: "#",
         code: "#"
     },
     {
+        id: "transport-optimization",
         title: "Transport Optimization System",
         description: "Logistics & Route Optimization Platform",
         insights: [
@@ -75,9 +77,22 @@ const ProjectsList = [
         ],
         bg: bg5,
         technologies: ["Python", "FastAPI", "Pandas" , "Data Analytics", "Algorithms"],
-        caseStudy: "#",
         code: "#"
     },
+    {
+        id: "rag-assistant",
+        title: "RAG-based AI assistant",
+        description: "Course-Aware Retrieval Augmented Learning System",
+        insights: [
+            "Answers strictly from course material",
+            "Retrieval-first pipeline to reduce hallucinations",
+            "Context-grounded responses using embeddings + LLM",
+            "Designed for reliable, syllabus-aligned learning"
+        ],
+        bg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80",
+        technologies: ["Python", "OpenAI API", "FAISS" , "LangChain" , "Embeddings"],
+        code: "#"
+    }
 ]
 
 function ProjectCards() {
@@ -127,7 +142,7 @@ function ProjectCards() {
                 >
 
                     {ProjectsList.map(
-                    ({ title, description, insights, bg, technologies, caseStudy, code }, index) => (
+                    ({ id, title, description, insights, bg, technologies, code }, index) => (
                         
                         <div
                             key={index}
@@ -193,9 +208,11 @@ function ProjectCards() {
                                 {/* BUTTONS */}
                                 <div className="flex justify-center gap-10">
 
-                                    <a href={caseStudy} className="px-18 py-3 bg-white text-black rounded-xl text-base font-normal">
+                                    <Link 
+                                    to={`/projects/${id}`}
+                                    className="px-18 py-3 bg-white text-black rounded-xl text-base font-normal">
                                         View Case Study
-                                    </a>
+                                    </Link>
 
                                     <a href={code} className="px-22 py-3 bg-white text-black rounded-xl text-base font-normal">
                                         View Code

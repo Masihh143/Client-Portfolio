@@ -12,13 +12,13 @@ function LandingPage() {
   return (
     <>
     <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <ProjectCards />
-      <Achivements />
-      <Contact />
-      <Footer />
+    <Home />
+    <About />
+    <Skills />
+    <ProjectCards />
+    <Achivements />
+    <Contact />
+    <Footer />
     </>
   )
 }
