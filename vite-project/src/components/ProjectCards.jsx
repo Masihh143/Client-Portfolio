@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom"
 import arrow from "../assets/Arrow.svg";
 import arrow2 from "../assets/ArrowSM.svg";
-import bg1 from "../assets/bg/CropAi/cover.jpg";
+import bg1 from "../assets/bg/CropAi/CropAi.jpg";
 import bg2 from "../assets/bg/HealthAi/HealthBG.jpg";
 import bg3 from "../assets/bg/HealthSphere/HealthSphere.jpg";
 import bg4 from "../assets/bg/StockAi/StockAI.jpg";
 import bg5 from "../assets/bg/Transport/Transport.jpg";
+import bg6 from "../assets/bg/Rag/Rag.jpg";
 
 const ProjectsList = [
     {
@@ -89,7 +90,7 @@ const ProjectsList = [
             "Context-grounded responses using embeddings + LLM",
             "Designed for reliable, syllabus-aligned learning"
         ],
-        bg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80",
+        bg: bg6,
         technologies: ["Python", "OpenAI API", "FAISS", "LangChain", "Embeddings"],
         code: "#"
     }
@@ -241,7 +242,7 @@ function ProjectCards() {
                 <div className='gap-20 flex flex-row justify-center items-center mt-20'>
                     <button
                         onClick={prev}
-                        className="h-25 w-25 pb-1 pr-1 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
+                        className="h-25 w-25 pb-5 pr-2 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
                         disabled={currentIndex === 0}
                     >
                         ‹
@@ -249,7 +250,7 @@ function ProjectCards() {
 
                     <button
                         onClick={next}
-                        className="h-25 w-25 pb-1 pl-1 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
+                        className="h-25 w-25 pb-5 pl-2 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
                         disabled={currentIndex === ProjectsList.length - 1}
                     >
                         ›

@@ -348,7 +348,7 @@ function Projects({project}) {
                     <button
                     onClick={prevProject}
                     disabled={currentIndex === 0}
-                    className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pr-1 pb-1 rounded-full border border-white/30 hover:scale-110 transition disabled:opacity-30">
+                    className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pr-1 pb-4 rounded-full border border-white/30 hover:scale-110 transition disabled:opacity-30">
                         ‹
                     </button>
                 </div>
@@ -368,7 +368,7 @@ function Projects({project}) {
                     <button
                     onClick={nextProject}
                     disabled={currentIndex === projects.length - 1}
-                    className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pl-1 pb-1 rounded-full border border-white/30 hover:scale-110 transition disabled:opacity-30">
+                    className="h-25 w-25 flex items-center justify-center bg-white text-black text-6xl pl-1 pb-4 rounded-full border border-white/30 hover:scale-110 transition disabled:opacity-30">
                         ›
                     </button>
                 </div>
