@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --font-product: "Product Sans", sans-serif;
   --font-satoshi: "Satoshi", sans-serif;
 }

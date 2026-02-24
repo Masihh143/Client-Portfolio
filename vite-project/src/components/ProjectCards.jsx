@@ -210,11 +210,21 @@ function ProjectCards() {
 
                                     <Link 
                                     to={`/projects/${id}`}
-                                    className="px-18 py-3 bg-white text-black rounded-xl text-base font-normal">
+                                    className="group px-18 py-3 bg-white text-black rounded-xl text-base font-normal inline-flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+                                    >
+                                        <span className="opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                                            ➔
+                                        </span>
                                         View Case Study
                                     </Link>
 
-                                    <a href={code} className="px-22 py-3 bg-white text-black rounded-xl text-base font-normal">
+                                    <a 
+                                    href={code}
+                                    className="group px-22 py-3 bg-white text-black rounded-xl text-base font-normal inline-flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+                                    >
+                                        <span className="opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                                            ➔
+                                        </span>
                                         View Code
                                     </a>
 

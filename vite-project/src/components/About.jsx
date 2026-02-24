@@ -34,8 +34,22 @@ function About() {
 
                 </div>
 
-                <button className="bg-white text-black self-baseline h-12 w-45 flex flex-row justify-evenly items-center">
-                    Resume
+                <button className="group bg-white text-black self-baseline h-12 w-45 overflow-hidden relative flex items-center justify-center">
+
+                    <div className="relative overflow-hidden leading-none">
+
+                        {/* Original Text */}
+                        <span className="block transition-transform duration-350 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-full">
+                        Resume
+                        </span>
+
+                        {/* Duplicate Text */}
+                        <span className="block absolute top-full left-0 w-full transition-transform duration-350 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-full">
+                        Resume
+                        </span>
+
+                    </div>
+
                 </button>
             </div>
         </div>
