@@ -14,13 +14,13 @@ function Skills() {
   return (
     <div
       id="skills"
-      className="min-h-screen bg-black flex flex-col justify-center items-center"
+      className="relative min-h-screen bg-black bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
+      style={{ backgroundImage: `url(${bg})` }}
     >
-      <div
-        className="relative bg-cover bg-center bg-no-repeat text-white px-30 py-24 flex flex-col justify-center"
-        style={{ backgroundImage: `url(${bg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-transparent via-50% to-black/100 pointer-events-none"></div>
+      {/* vignette */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-transparent via-65% to-black/100 pointer-events-none"></div>
+
+      <div className="relative text-white px-30 py-24 flex flex-col justify-center">
 
         <div className="grid grid-cols-2 mb-16">
           <div className="flex flex-row items-center gap-5 justify-center">
