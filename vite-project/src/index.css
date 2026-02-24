@@ -3,6 +3,11 @@
 :root {
   --font-product: "Product Sans", sans-serif;
   --font-satoshi: "Satoshi", sans-serif;
+  --font-googlecode: "Google Sans Code", monospace;
+}
+
+body {
+  font-family: var(--font-satoshi);
 }
 
 @layer base {

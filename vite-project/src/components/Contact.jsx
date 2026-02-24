@@ -12,8 +12,8 @@ function Contact() {
         { name: "LeetCode", link: "#" },
         { name: "HackerRank", link: "#" },
         { name: "CodeChef", link: "#" }
-      ];
-      
+    ];
+
 
     return (
         <div id="contact" className="min-h-screen bg-black text-white flex flex-row text-white">
@@ -23,50 +23,50 @@ function Contact() {
 
                     <div className="grid grid-cols-1 mb-16">
                         <div className="flex flex-row gap-5">
-                        <h1 className="text-8xl font-bold">Lets Connect</h1>
-                        <img className="mt-10" src={arrow} alt="arrow" />
+                            <h1 className="text-8xl font-bold">Lets Connect</h1>
+                            <img className="mt-10" src={arrow} alt="arrow" />
                         </div>
                     </div>
 
                     <div>
                         <h1 className='font-black text-[32px]'>I’m currently open to</h1>
                         <ul className="space-y-1 text-xl font-normal mt-4">
-                        {[
-                            "Data Science & ML roles",
-                            "Applied AI projects",
-                            "Research & internship opportunities",
-                            "Collaboration on real-world AI systems",
-                        ].map((item, index) => (
-                            <li key={index} className="flex items-center gap-2">
-                            <span className="text-white/80">⚭</span>
-                            {item}
-                            </li>
-                        ))}
+                            {[
+                                "Data Science & ML roles",
+                                "Applied AI projects",
+                                "Research & internship opportunities",
+                                "Collaboration on real-world AI systems",
+                            ].map((item, index) => (
+                                <li key={index} className="flex items-center gap-2">
+                                    <span className="text-white/80">⚭</span>
+                                    {item}
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     <div className='flex flex-col items-start gap-4 mt-20'>
                         {contacts.map((item, index) => (
                             <a
-                            key={index}
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className='group bg-white text-black text-lg font-normal h-12 w-45 overflow-hidden relative flex justify-center items-center'
+                                key={index}
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='group bg-white text-black text-lg font-normal h-12 w-45 overflow-hidden relative flex justify-center items-center font-g'
                             >
-                            <div className="relative flex items-center justify-center overflow-hidden leading-none">
+                                <div className="relative flex items-center justify-center overflow-hidden leading-none">
 
-                                {/* Original Text */}
-                                <span className="block transition-transform duration-350 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-full">
-                                {item.name}
-                                </span>
+                                    {/* Original Text */}
+                                    <span className="block transition-transform duration-350 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-full">
+                                        {item.name}
+                                    </span>
 
-                                {/* Duplicate Text */}
-                                <span className="block absolute top-full left-0 w-full transition-transform duration-350 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-full">
-                                {item.name}
-                                </span>
+                                    {/* Duplicate Text */}
+                                    <span className="block absolute top-full left-0 w-full transition-transform duration-350 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:-translate-y-full">
+                                        {item.name}
+                                    </span>
 
-                            </div>
+                                </div>
                             </a>
                         ))}
                     </div>
@@ -133,9 +133,9 @@ function Contact() {
                     </div>
                 </div>
             </div>
-      </div>
+        </div>
     );
-  }
-  
+}
+
 
 export default Contact

@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         product: ['"Product Sans"', 'sans-serif'],
         satoshi: ['"Satoshi"', 'sans-serif'],
+        googlecode: ['"Google Sans Code"', 'monospace'],
       },
     },
   },

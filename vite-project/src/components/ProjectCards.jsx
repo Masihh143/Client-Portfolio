@@ -20,7 +20,7 @@ const ProjectsList = [
             "Deployed ML system with API-based inference"
         ],
         bg: bg1,
-        technologies: ["Python", "FastAPI" , "CNN", "OpenCV" , "TensorFlow", "Render"],
+        technologies: ["Python", "FastAPI", "CNN", "OpenCV", "TensorFlow", "Render"],
         code: "#"
     },
     {
@@ -34,7 +34,7 @@ const ProjectsList = [
             "Built and deployed as a real healthcare AI workflow"
         ],
         bg: bg2,
-        technologies: ["Python", "FastAPI", "OpenCV" , "Deep Learning", "JWT"],
+        technologies: ["Python", "FastAPI", "OpenCV", "Deep Learning", "JWT"],
         code: "#"
     },
     {
@@ -48,7 +48,7 @@ const ProjectsList = [
             "Designed scalable healthcare system architecture"
         ],
         bg: bg3,
-        technologies: ["Next.js", "FastAPI", "JWT" , "RBAC", "Cloud Deployement"],
+        technologies: ["Next.js", "FastAPI", "JWT", "RBAC", "Cloud Deployement"],
         code: "#"
     },
     {
@@ -62,7 +62,7 @@ const ProjectsList = [
             "GenAI assistant for human-readable financial insights"
         ],
         bg: bg4,
-        technologies: ["Python", "FastAPI", "ML" , "Time-Series", "React" , "GenAi" , "SQL"],
+        technologies: ["Python", "FastAPI", "ML", "Time-Series", "React", "GenAi", "SQL"],
         code: "#"
     },
     {
@@ -76,7 +76,7 @@ const ProjectsList = [
             "Focused on real-world logistics problems"
         ],
         bg: bg5,
-        technologies: ["Python", "FastAPI", "Pandas" , "Data Analytics", "Algorithms"],
+        technologies: ["Python", "FastAPI", "Pandas", "Data Analytics", "Algorithms"],
         code: "#"
     },
     {
@@ -90,7 +90,7 @@ const ProjectsList = [
             "Designed for reliable, syllabus-aligned learning"
         ],
         bg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80",
-        technologies: ["Python", "OpenAI API", "FAISS" , "LangChain" , "Embeddings"],
+        technologies: ["Python", "OpenAI API", "FAISS", "LangChain", "Embeddings"],
         code: "#"
     }
 ]
@@ -107,158 +107,157 @@ function ProjectCards() {
 
     const next = () => {
         if (currentIndex < ProjectsList.length - 1) {
-          setCurrentIndex(currentIndex + 1);
+            setCurrentIndex(currentIndex + 1);
         }
-      };
-    
-      const prev = () => {
-        if (currentIndex > 0) {
-          setCurrentIndex(currentIndex - 1);
-        }
-      };
-  return (
-    <>
-        <div id='projectCards' className='min-h-screen flex flex-col justify-center items-center bg-black text-white'>
+    };
 
-            <div className="grid grid-cols-3">
-                <div className="flex flex-row items-center gap-5 justify-center">
-                    <h1 className="text-8xl font-bold">Projects</h1>
-                    <img className="mt-10" src={arrow} alt="arrow" />
+    const prev = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(currentIndex - 1);
+        }
+    };
+    return (
+        <>
+            <div id='projectCards' className='min-h-screen flex flex-col justify-center items-center bg-black text-white'>
+
+                <div className="grid grid-cols-3">
+                    <div className="flex flex-row items-center gap-5 justify-center">
+                        <h1 className="text-8xl font-bold">Projects</h1>
+                        <img className="mt-10" src={arrow} alt="arrow" />
+                    </div>
+                </div>
+
+                <p className='mb-50 text-xl font-medium leading-none'>( Selected projects focused on applied ML, system design, and real-world deployment )</p>
+
+                <div className="overflow-hidden"
+                    style={{ width: `${VIEWPORT_WIDTH}px` }}
+                >
+                    {/* TRACK */}
+                    <div
+                        className="flex transition-transform duration-500 ease-out"
+                        style={{
+                            gap: `${GAP}px`,
+                            transform: `translateX(${CENTER_OFFSET - currentIndex * STEP}px)`,
+                        }}
+                    >
+
+                        {ProjectsList.map(
+                            ({ id, title, description, insights, bg, technologies, code }, index) => (
+
+                                <div
+                                    key={index}
+                                    className={`w-[830px] h-[500px] rounded-2xl px-20 py-12 relative overflow-hidden flex-shrink-0 transition-all duration-500 font-product ${index === currentIndex
+                                            ? "scale-100 opacity-100"
+                                            : "scale-90 opacity-40"
+                                        }`}
+                                    style={{
+                                        backgroundImage: `url(${bg})`,
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center",
+                                    }}
+                                >
+
+
+                                    {/* CONTENT */}
+                                    <div className="relative z-10">
+
+                                        {/* TITLE */}
+                                        <h2 className="text-4xl font-semibold mb-1">
+                                            {title}
+                                        </h2>
+
+                                        {/* DESCRIPTION */}
+                                        <p className="text-white text-2xl font-normal mb-4">
+                                            {description}
+                                        </p>
+
+                                        {/* INSIGHTS */}
+                                        <ul className="space-y-2 mb-6">
+                                            {insights.map((point, i) => (
+                                                <li key={i} className="flex items-start gap-2 text-xl font-normal">
+                                                    <span>⌭</span>
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                        {/* TECH STACK */}
+                                        <div className="mb-6">
+
+                                            <div className='flex items-center gap-2'>
+                                                <span className="text-base font-normal border-2 border-dashed py-1 px-2 mb-4 inline-block">
+                                                    Tech Stack
+                                                </span>
+                                                <img src={arrow2} alt="arrow" />
+                                            </div>
+
+                                            <div className="flex flex-wrap justify-center gap-5">
+                                                {technologies.map((tech, i) => (
+                                                    <span
+                                                        key={i}
+                                                        className="px-3 py-2 bg-white text-black text-base font-normal inline-block"
+                                                    >
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
+
+                                        </div>
+
+                                        {/* BUTTONS */}
+                                        <div className="flex justify-center gap-10">
+
+                                            <Link
+                                                to={`/projects/${id}`}
+                                                className="group px-18 py-3 bg-white text-black rounded-xl text-base font-normal inline-flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+                                            >
+                                                <span className="opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                                                    ➔
+                                                </span>
+                                                View Case Study
+                                            </Link>
+
+                                            <a
+                                                href={code}
+                                                className="group px-22 py-3 bg-white text-black rounded-xl text-base font-normal inline-flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+                                            >
+                                                <span className="opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                                                    ➔
+                                                </span>
+                                                View Code
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            )
+                        )}
+                    </div>
+                </div>
+
+                <div className='gap-20 flex flex-row justify-center items-center mt-20'>
+                    <button
+                        onClick={prev}
+                        className="h-25 w-25 pb-1 pr-1 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
+                        disabled={currentIndex === 0}
+                    >
+                        ‹
+                    </button>
+
+                    <button
+                        onClick={next}
+                        className="h-25 w-25 pb-1 pl-1 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
+                        disabled={currentIndex === ProjectsList.length - 1}
+                    >
+                        ›
+                    </button>
                 </div>
             </div>
-
-            <p className='mb-50 text-xl font-medium leading-none'>( Selected projects focused on applied ML, system design, and real-world deployment )</p>
-
-            <div className="overflow-hidden"
-                style={{ width: `${VIEWPORT_WIDTH}px` }}
-            >
-                {/* TRACK */}
-                <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{
-                    gap: `${GAP}px`,
-                    transform: `translateX(${CENTER_OFFSET - currentIndex * STEP}px)`,
-                }}
-                >
-
-                    {ProjectsList.map(
-                    ({ id, title, description, insights, bg, technologies, code }, index) => (
-                        
-                        <div
-                            key={index}
-                            className={`w-[830px] h-[500px] rounded-2xl px-20 py-12 relative overflow-hidden flex-shrink-0 transition-all duration-500 ${
-                                index === currentIndex
-                                  ? "scale-100 opacity-100"
-                                  : "scale-90 opacity-40"
-                              }`}
-                              style={{
-                                backgroundImage: `url(${bg})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                              }}
-                            >        
-
-
-                            {/* CONTENT */}
-                            <div className="relative z-10">
-
-                                {/* TITLE */}
-                                <h2 className="text-4xl font-semibold mb-1">
-                                    {title}
-                                </h2>
-
-                                {/* DESCRIPTION */}
-                                <p className="text-white text-2xl font-normal mb-4">
-                                    {description}
-                                </p>
-
-                                {/* INSIGHTS */}
-                                <ul className="space-y-2 mb-6">
-                                    {insights.map((point, i) => (
-                                        <li key={i} className="flex items-start gap-2 text-xl font-normal">
-                                        <span>⌭</span>
-                                        <span>{point}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                {/* TECH STACK */}
-                                <div className="mb-6">
-
-                                    <div className='flex items-center gap-2'>
-                                        <span className="text-base font-normal border-2 border-dashed py-1 px-2 mb-4 inline-block">
-                                            Tech Stack
-                                        </span>
-                                        <img src={arrow2} alt="arrow" />
-                                    </div>
-
-                                    <div className="flex flex-wrap justify-center gap-5">
-                                        {technologies.map((tech, i) => (
-                                        <span
-                                            key={i}
-                                            className="px-3 py-2 bg-white text-black text-base font-normal inline-block"
-                                        >
-                                            {tech}
-                                        </span>
-                                        ))}
-                                    </div>
-
-                                </div>
-
-                                {/* BUTTONS */}
-                                <div className="flex justify-center gap-10">
-
-                                    <Link 
-                                    to={`/projects/${id}`}
-                                    className="group px-18 py-3 bg-white text-black rounded-xl text-base font-normal inline-flex items-center gap-2 hover:scale-105 transition-transform duration-300"
-                                    >
-                                        <span className="opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                                            ➔
-                                        </span>
-                                        View Case Study
-                                    </Link>
-
-                                    <a 
-                                    href={code}
-                                    className="group px-22 py-3 bg-white text-black rounded-xl text-base font-normal inline-flex items-center gap-2 hover:scale-105 transition-transform duration-300"
-                                    >
-                                        <span className="opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                                            ➔
-                                        </span>
-                                        View Code
-                                    </a>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    )
-                    )}
-            </div>
-        </div>
-
-            <div className='gap-20 flex flex-row justify-center items-center mt-20'>
-                <button
-                    onClick={prev}
-                    className="h-25 w-25 pb-1 pr-1 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
-                    disabled={currentIndex === 0}
-                    >
-                    ‹
-                </button>
-
-                <button
-                    onClick={next}
-                    className="h-25 w-25 pb-1 pl-1 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
-                    disabled={currentIndex === ProjectsList.length - 1}
-                    >
-                    ›
-                </button>
-            </div>
-        </div>
-    </>
-  )
+        </>
+    )
 }
 
 export default ProjectCards
