@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import arrow from "../assets/Arrow.svg";
 import akhil from "../assets/AKHIL.png";
 import hand from "../assets/hand.svg";
