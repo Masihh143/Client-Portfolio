@@ -27,17 +27,29 @@ const Navbar = () => {
 
   const [visible, setVisible] = useState(true)
   const timer = useRef(null)
+  const lastScrollY = useRef(0)
 
   useEffect(() => {
     const onScroll = () => {
-      const atTop = window.scrollY === 0
+      const currentY = window.scrollY
+      const atTop = currentY === 0
+      const scrollingUp = currentY < lastScrollY.current
 
-      setVisible(true)
-      clearTimeout(timer.current)
-
-      if (!atTop) {
-        timer.current = setTimeout(() => setVisible(false), 2000)
+      if (atTop || scrollingUp) {
+        // At top or scrolling up → show and cancel hide timer
+        setVisible(true)
+        clearTimeout(timer.current)
+        if (!atTop) {
+          // Away from top while scrolling up → still arm the inactivity timer
+          timer.current = setTimeout(() => setVisible(false), 2000)
+        }
+      } else {
+        // Scrolling down → hide immediately
+        clearTimeout(timer.current)
+        setVisible(false)
       }
+
+      lastScrollY.current = currentY
     }
 
     window.addEventListener('scroll', onScroll, { passive: true })
