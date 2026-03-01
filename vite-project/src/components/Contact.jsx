@@ -5,9 +5,9 @@ import akhil from "../assets/AKHIL.png";
 import hand from "../assets/hand.svg";
 import heading from "../assets/LetsConnect.svg";
 
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'service_22cb7wp';
+const EMAILJS_TEMPLATE_ID = 'template_35vut8n';
+const EMAILJS_PUBLIC_KEY = 'FfDVhcoYhYkmAVae-';
 
 function Contact() {
 
