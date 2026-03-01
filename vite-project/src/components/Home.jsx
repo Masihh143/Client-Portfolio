@@ -26,7 +26,7 @@ function Home() {
   return (
     <div
       id="home"
-      className="min-h-screen mt-5 bg-black text-white flex justify-center items-center"
+      className="min-h-screen mt-10 bg-black text-white flex justify-center items-center"
     >
       <div className="relative pr-70 pt-15">
 
@@ -49,7 +49,7 @@ function Home() {
               return (
                 <div
                   key={index}
-                  className="absolute w-36 h-36 rounded-full pointer-events-none blur-2xl transition-all duration-75 ease-out"
+                  className="absolute w-20 h-20 rounded-full pointer-events-none blur-2xl transition-all duration-75 ease-out"
                   style={{
                     left: pos.x - 80,
                     top: pos.y - 80,

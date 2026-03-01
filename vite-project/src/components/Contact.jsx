@@ -1,17 +1,17 @@
 import React from 'react'
 import arrow from "../assets/Arrow.svg";
-import akhil from "../assets/AKHIL.jpg";
+import akhil from "../assets/AKHIL.png";
 import hand from "../assets/hand.svg";
 
 function Contact() {
 
     const contacts = [
-        { name: "Email", link: "mailto:your@email.com" },
-        { name: "GitHub", link: "https://github.com/yourusername" },
-        { name: "LinkedIn", link: "https://linkedin.com/in/yourusername" },
-        { name: "LeetCode", link: "#" },
-        { name: "HackerRank", link: "#" },
-        { name: "CodeChef", link: "#" }
+        { name: "Email", link: "mailto:akhilsaurabh65@gmail.com" },
+        { name: "GitHub", link: "https://github.com/AKHIL-SAURABH" },
+        { name: "LinkedIn", link: "https://www.linkedin.com/in/akhil-saurabh-1b025b333/" },
+        { name: "LeetCode", link: "https://leetcode.com/u/DATACODER_PY/" },
+        { name: "HackerRank", link: "https://www.hackerrank.com/profile/akhilsaurabh65" },
+        { name: "CodeChef", link: "https://www.codechef.com/users/akhilsaurabh" }
     ];
 
 
@@ -50,7 +50,7 @@ function Contact() {
                             <a
                                 key={index}
                                 href={item.link}
-                                target="_blank"
+                                target="blank"
                                 rel="noopener noreferrer"
                                 className='group bg-white text-black text-lg font-normal h-12 w-45 overflow-hidden relative flex justify-center items-center font-g'
                             >

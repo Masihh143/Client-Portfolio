@@ -1,6 +1,7 @@
 import React from "react";
 import arrow from "../assets/Arrow.svg";
 import bg from "../assets/black-bg.jpg";
+import skill from "../assets/Skills.png"
 
 function Skills() {
 
@@ -24,7 +25,8 @@ function Skills() {
 
         <div className="grid grid-cols-2 mb-16">
           <div className="flex flex-row items-center gap-5 justify-center">
-            <h1 className="text-8xl font-bold">Skills</h1>
+            {/* <h1 className="text-8xl font-bold">Skills</h1> */}
+            <img src={skill} alt="skill" />
             <img className="mt-10" src={arrow} alt="arrow" />
           </div>
         </div>

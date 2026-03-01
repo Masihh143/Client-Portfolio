@@ -41,7 +41,7 @@ const Navbar = () => {
           }}
         >
           {roles.map((role, i) => (
-            <div key={i} className="h-8 flex items-center">
+            <div key={i} className="h-8 text-2xl flex items-center">
               {role}
             </div>
           ))}
