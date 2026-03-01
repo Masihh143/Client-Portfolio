@@ -1,4 +1,5 @@
 import React from 'react'
+import achivement from '../assets/Achivements.svg';
 import arrow from "../assets/Arrow.svg";
 import bg from "../assets/black-bg2.png";
 
@@ -23,9 +24,10 @@ function Achivements() {
 
             <div className="relative z-10 text-white px-60 py-24 flex flex-col justify-center items-center">
 
-                <div className="grid grid-cols-2 mb-20">
-                    <div className="flex flex-row items-center gap-5 justify-center">
-                        <h1 className="text-8xl font-bold">Achivements</h1>
+                <div className="w-full grid grid-cols-2 mb-20">
+                    <div className="flex flex-row items-center gap-5 justify-start">
+                        {/* <h1 className="text-8xl font-bold">Achivements</h1> */}
+                        <img src={achivement} alt="achivement" />
                         <img className="mt-10" src={arrow} alt="arrow" />
                     </div>
                 </div>

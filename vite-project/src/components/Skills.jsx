@@ -23,8 +23,8 @@ function Skills() {
 
       <div className="relative text-white px-30 py-24 flex flex-col justify-center">
 
-        <div className="grid grid-cols-2 mb-16">
-          <div className="flex flex-row items-center gap-5 justify-center">
+        <div className="w-full grid grid-cols-2 mb-16">
+          <div className="flex flex-row items-center gap-5 justify-start">
             {/* <h1 className="text-8xl font-bold">Skills</h1> */}
             <img src={skill} alt="skill" />
             <img className="mt-10" src={arrow} alt="arrow" />

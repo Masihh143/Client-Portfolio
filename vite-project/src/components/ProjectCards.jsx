@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom"
 import arrow from "../assets/Arrow.svg";
 import arrow2 from "../assets/ArrowSM.svg";
+import project from "../assets/Projects.svg";
 import bg1 from "../assets/bg/CropAi/CropAi.jpg";
 import bg2 from "../assets/bg/HealthAi/HealthBG.jpg";
 import bg3 from "../assets/bg/HealthSphere/HealthSphere.jpg";
@@ -121,9 +122,10 @@ function ProjectCards() {
         <>
             <div id='projectCards' className='min-h-screen flex flex-col justify-center items-center bg-black text-white'>
 
-                <div className="grid grid-cols-3">
+                <div className="w-full grid grid-cols-2 my-10">
                     <div className="flex flex-row items-center gap-5 justify-center">
-                        <h1 className="text-8xl font-bold">Projects</h1>
+                        {/* <h1 className="text-8xl font-bold">Projects</h1> */}
+                        <img src={project} alt="project" />
                         <img className="mt-10" src={arrow} alt="arrow" />
                     </div>
                 </div>
