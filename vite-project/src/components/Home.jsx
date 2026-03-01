@@ -26,7 +26,7 @@ function Home() {
   return (
     <div
       id="home"
-      className="min-h-screen mt-10 bg-black text-white flex justify-center items-center"
+      className="min-h-screen pt-10 bg-black text-white flex justify-center items-center"
     >
       <div className="relative pr-70 pt-15">
 

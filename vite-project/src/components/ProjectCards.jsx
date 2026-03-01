@@ -130,7 +130,7 @@ function ProjectCards() {
                     </div>
                 </div>
 
-                <p className='mb-50 text-xl font-medium leading-none'>( Selected projects focused on applied ML, system design, and real-world deployment )</p>
+                <p className='mt-3 mb-20 text-xl font-medium leading-none'>( Selected projects focused on applied ML, system design, and real-world deployment )</p>
 
                 <div className="overflow-hidden"
                     style={{ width: `${VIEWPORT_WIDTH}px` }}
@@ -241,7 +241,7 @@ function ProjectCards() {
                     </div>
                 </div>
 
-                <div className='gap-20 flex flex-row justify-center items-center mt-20'>
+                <div className='gap-20 flex flex-row justify-center items-center mt-15'>
                     <button
                         onClick={prev}
                         className="h-25 w-25 pb-5 pr-2 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"

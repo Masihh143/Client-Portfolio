@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react'
+import { React, useState, useEffect, useRef } from 'react'
 import logo from '../assets/logo.png'
 
 const roles = [
@@ -21,14 +21,40 @@ const Navbar = () => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % roles.length)
     }, 2000)
-
     return () => clearInterval(interval)
   }, [])
 
 
+  const [visible, setVisible] = useState(true)
+  const timer = useRef(null)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const atTop = window.scrollY === 0
+
+      setVisible(true)
+      clearTimeout(timer.current)
+
+      if (!atTop) {
+        timer.current = setTimeout(() => setVisible(false), 2000)
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      clearTimeout(timer.current)
+    }
+  }, [])
 
   return (
-    <nav className="min-h-32 bg-black text-lg text-white flex flex-row justify-between fixed top-0 left-0 right-0 px-15 py-10 z-100 font-product font-light text-base leading-none tracking-tightest">
+    <nav
+      className="min-h-32 bg-black text-lg text-white flex flex-row justify-between fixed top-0 left-0 right-0 px-15 py-10 z-100 font-product font-light text-base leading-none tracking-tightest transition-opacity duration-500 ease-in-out"
+      style={{
+        opacity: visible ? 1 : 0,
+        pointerEvents: visible ? 'auto' : 'none',
+      }}
+    >
       <div className='logo cursor-pointer' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
         <img src={logo} alt="logo" />
       </div>
