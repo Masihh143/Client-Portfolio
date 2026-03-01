@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import emailjs from 'emailjs-com'
 import arrow from "../assets/Arrow.svg";
 import akhil from "../assets/AKHIL.png";
 import hand from "../assets/hand.svg";
 import heading from "../assets/LetsConnect.svg";
+
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
 
 function Contact() {
 
@@ -14,6 +19,34 @@ function Contact() {
         { name: "HackerRank", link: "https://www.hackerrank.com/profile/akhilsaurabh65" },
         { name: "CodeChef", link: "https://www.codechef.com/users/akhilsaurabh" }
     ];
+
+    const [message, setMessage] = useState('');
+    const [email, setEmail] = useState('');
+    const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
+
+    const handleSend = () => {
+        if (!message.trim()) return;          // don't send empty messages
+        setStatus('sending');
+
+        emailjs.send(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            {
+                from_email: email || 'anonymous',
+                message: message,
+            },
+            EMAILJS_PUBLIC_KEY
+        )
+            .then(() => {
+                setStatus('success');
+                setMessage('');
+                setEmail('');
+            })
+            .catch((err) => {
+                console.error('EmailJS error:', err);
+                setStatus('error');
+            });
+    };
 
 
     return (
@@ -31,7 +64,7 @@ function Contact() {
                     </div>
 
                     <div>
-                        <h1 className='font-black text-[32px]'>I’m currently open to</h1>
+                        <h1 className='font-black text-[32px]'>I'm currently open to</h1>
                         <ul className="space-y-1 text-xl font-normal mt-4">
                             {[
                                 "Data Science & ML roles",
@@ -52,7 +85,7 @@ function Contact() {
                             <a
                                 key={index}
                                 href={item.link}
-                                target="blank"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className='group bg-white text-black text-lg font-normal h-12 w-45 overflow-hidden relative flex justify-center items-center font-g'
                             >
@@ -85,26 +118,46 @@ function Contact() {
                     <div className="flex flex-col gap-4 p-6">
                         <label className="text-2xl font-normal">Your Message:</label>
                         <textarea
-                            className="bg-gray-200 rounded-[10px] h-40 p-3"
+                            className="bg-gray-200 rounded-[10px] h-40 p-3 resize-none outline-none"
+                            placeholder="Write your message here…"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
                         />
 
                         <label className="text-2xl font-normal">
                             Your email <span className='text-xs'>(optional, if you'd like a reply):</span>
                         </label>
                         <input
-                            className="bg-gray-200 rounded-[10px] p-2"
+                            className="bg-gray-200 rounded-[10px] p-2 outline-none"
+                            type="email"
+                            placeholder="you@example.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
+
+                        {/* Status feedback */}
+                        {status === 'success' && (
+                            <p className="text-green-600 font-semibold text-sm">✓ Message sent! I'll get back to you soon.</p>
+                        )}
+                        {status === 'error' && (
+                            <p className="text-red-500 font-semibold text-sm">✗ Something went wrong. Please try again.</p>
+                        )}
 
                     </div>
 
                     <div className='relative'>
                         <img src={hand} alt="hand" />
-                        <div className="group absolute top-15 left-46 w-40 h-40 flex items-center justify-center">
+                        {/* Send button – triggers emailjs.send() on click */}
+                        <div
+                            className="group absolute top-15 left-46 w-40 h-40 flex items-center justify-center cursor-pointer"
+                            onClick={handleSend}
+                            style={{ pointerEvents: status === 'sending' ? 'none' : 'auto' }}
+                        >
 
                             {/* Black base circle */}
                             <div className="relative w-full h-full bg-black rounded-full overflow-hidden flex items-center justify-center">
 
-                                {/* Purple animated circle */}
+                                {/* Blue animated fill */}
                                 <div className="
                                 absolute
                                 bottom-0
@@ -125,7 +178,7 @@ function Contact() {
                                 "></div>
 
                                 <span className="relative z-20 text-white text-2xl font-normal p-2 flex-wrap text-center">
-                                    Send Message
+                                    {status === 'sending' ? 'Sending…' : 'Send Message'}
                                 </span>
 
                             </div>

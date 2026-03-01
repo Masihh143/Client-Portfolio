@@ -79,12 +79,21 @@ const Navbar = () => {
 
       <div>
         <ul className='flex flex-col gap-4'>
-          {["Linkedin", "GitHub", "LeetCode"].map((item, index) => (
-            <li key={index} className="group w-fit cursor-pointer">
-              <span className="relative inline-block">
-                {item}
+          {[
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/akhil-saurabh-1b025b333/" },
+            { label: "GitHub", href: "https://github.com/AKHIL-SAURABH" },
+            { label: "LeetCode", href: "https://leetcode.com/u/DATACODER_PY/" },
+          ].map((item, index) => (
+            <li key={index} className="group w-fit">
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative inline-block"
+              >
+                {item.label}
                 <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
-              </span>
+              </a>
             </li>
           ))}
         </ul>
