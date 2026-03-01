@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom"
 import arrow from "../assets/Arrow.svg";
 import arrow2 from "../assets/ArrowSM.svg";
-import project from "../assets/Projects.svg";
 import bg1 from "../assets/bg/CropAi/CropAi.jpg";
 import bg2 from "../assets/bg/HealthAi/HealthBG.jpg";
 import bg3 from "../assets/bg/HealthSphere/HealthSphere.jpg";
@@ -122,10 +121,9 @@ function ProjectCards() {
         <>
             <div id='projectCards' className='min-h-screen flex flex-col justify-center items-center bg-black text-white'>
 
-                <div className="w-full grid grid-cols-2 my-10">
+                <div className="grid grid-cols-3">
                     <div className="flex flex-row items-center gap-5 justify-center">
-                        {/* <h1 className="text-8xl font-bold">Projects</h1> */}
-                        <img src={project} alt="project" />
+                        <h1 className="text-8xl font-bold">Projects</h1>
                         <img className="mt-10" src={arrow} alt="arrow" />
                     </div>
                 </div>
@@ -244,7 +242,7 @@ function ProjectCards() {
                 <div className='gap-20 flex flex-row justify-center items-center mt-15'>
                     <button
                         onClick={prev}
-                        className="h-25 w-25 pb-5 pr-2 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
+                        className="h-25 w-25 pb-5 pr-2 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30 transition-opacity duration-300 ease-in-out"
                         disabled={currentIndex === 0}
                     >
                         ‹
@@ -252,7 +250,7 @@ function ProjectCards() {
 
                     <button
                         onClick={next}
-                        className="h-25 w-25 pb-5 pl-2 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30"
+                        className="h-25 w-25 pb-5 pl-2 rounded-full bg-white text-black text-7xl flex items-center justify-center text-center disabled:opacity-30 transition-opacity duration-300 ease-in-out"
                         disabled={currentIndex === ProjectsList.length - 1}
                     >
                         ›

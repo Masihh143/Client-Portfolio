@@ -66,6 +66,14 @@ const Navbar = () => {
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? 'auto' : 'none',
       }}
+      onMouseEnter={() => {
+        clearTimeout(timer.current)
+      }}
+      onMouseLeave={() => {
+        if (window.scrollY !== 0) {
+          timer.current = setTimeout(() => setVisible(false), 2000)
+        }
+      }}
     >
       <div className='logo cursor-pointer' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
         <img src={logo} alt="logo" />
